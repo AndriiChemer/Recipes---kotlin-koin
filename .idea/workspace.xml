@@ -10,7 +10,54 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0214b7ba-59e7-4f9a-ac54-5642183390a4" name="Default Changelist" comment="" />
+    <list default="true" id="0214b7ba-59e7-4f9a-ac54-5642183390a4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_asynclayoutinflater_asynclayoutinflater_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_documentfile_documentfile_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_legacy_legacy_support_core_ui_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_legacy_legacy_support_core_utils_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_legacy_legacy_support_v4_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_localbroadcastmanager_localbroadcastmanager_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_media_media_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_print_print_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_slidingpanelayout_slidingpanelayout_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_swiperefreshlayout_swiperefreshlayout_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_gson_gson_2_8_6_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/core/utils/RecipePreference.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/ui/recipeshortdetail/RecipeShortDetailActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/ui/recipeslist/recipeshortdetail/presentation/animation/AnimationExt.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/ui/recipeslist/recipeshortdetail/presentation/animation/DetailsTransition.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/ui/recipeslist/recipeshortdetail/presentation/animation/ExitWithAnimation.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/gradient_recipe_short_detail.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/rounded_yelow_bottom_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/white_rounded_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_recipe_short_detail.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/transition/change_image_transform.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/description" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_gson_gson_2_8_5_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/app/RecipesApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/app/RecipesApplication.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/ui/recipeslist/presentation/RecipesActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/ui/recipeslist/presentation/RecipesActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/ui/recipeslist/presentation/RecipesAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/ui/recipeslist/presentation/RecipesAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/recipes_activity.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/recipes_activity.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,19 +79,26 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin Interface" />
-        <option value="Kotlin File" />
         <option value="Class" />
         <option value="layoutResourceFile" />
+        <option value="Kotlin Interface" />
+        <option value="Kotlin File" />
         <option value="Kotlin Class" />
+        <option value="valueResourceFile" />
         <option value="resourceFile" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1cUFRzGQlYnyUpilFiCzaV1wIDj" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -55,18 +109,19 @@
     <property name="DEBUGGER_ID" value="Auto" />
     <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Nexus_5X_API_24" />
     <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-05-29T10:11:23.661Z" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/customSdk" />
     <property name="lastFolderRoot" value="$USER_HOME$/Downloads/images.jpeg" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/ui/recipeslist/recipeshortdetail/presentation/animation" />
     <property name="settings.editor.selected.configurable" value="android.sdk-updates" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/ui/subcategory/presentation/adapter" />
-      <recent name="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/app/di" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/ui/recipeslist/recipeshortdetail/presentation/animation" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
       <recent name="com.artatech.inkbook.recipes.api.response.models.recipe" />
@@ -80,8 +135,14 @@
       <recent name="com.artatech.inkbook.recipes.ui.subcategory" />
       <recent name="com.artatech.inkbook.recipes.ui.category" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <key name="android.template.-1812874585">
+      <recent name="com.artatech.inkbook.recipes.ui.recipeshortdetail" />
+      <recent name="com.artatech.inkbook.recipes.ui.recipeslist.recipeshortdetail.presentation" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/res/transaction" />
+      <recent name="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/ui/subcategory/presentation/adapter" />
+      <recent name="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/app/di" />
     </key>
   </component>
   <component name="RunManager">
@@ -188,27 +249,34 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="499" y="173" key="#com.intellij.ide.util.MemberChooser" timestamp="1599236347308">
+    <state x="420" y="260" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1599483861219">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="420" y="260" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1599483861219" />
+    <state x="499" y="173" key="#com.intellij.ide.util.MemberChooser" timestamp="1599475611240">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="499" y="173" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1599236347308" />
-    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1599221705432">
+    <state x="499" y="173" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1599475611240" />
+    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1599487186618">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1599221705432" />
+    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1599487186618" />
     <state x="397" y="109" width="650" height="681" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1599140872793">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="397" y="109" width="650" height="681" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1599140872793" />
-    <state x="308" y="212" key="AndroidCreateResourceDirectoryDialog" timestamp="1599217577164">
+    <state x="308" y="212" key="AndroidCreateResourceDirectoryDialog" timestamp="1599484066021">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="308" y="212" key="AndroidCreateResourceDirectoryDialog/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1599217577164" />
-    <state x="308" y="212" key="AndroidCreateResourceFileDialog" timestamp="1599466470150">
+    <state x="308" y="212" key="AndroidCreateResourceDirectoryDialog/0.0.1440.900@0.0.1440.900" timestamp="1599484066021" />
+    <state x="308" y="212" key="AndroidCreateResourceFileDialog" timestamp="1599484132214">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="308" y="212" key="AndroidCreateResourceFileDialog/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1599218757317" />
-    <state x="308" y="212" key="AndroidCreateResourceFileDialog/0.0.1440.900@0.0.1440.900" timestamp="1599466470150" />
+    <state x="308" y="212" key="AndroidCreateResourceFileDialog/0.0.1440.900@0.0.1440.900" timestamp="1599484132214" />
     <state x="576" y="222" key="AndroidProcessChooserDialog" timestamp="1599234246236">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -217,31 +285,35 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="568" height="466" key="DebuggerActiveHint/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1599234297287" />
-    <state width="1398" height="276" key="GridCell.Tab.0.bottom" timestamp="1599465448263">
-      <screen x="0" y="23" width="1440" height="797" />
+    <state width="1398" height="337" key="GridCell.Tab.0.bottom" timestamp="1599485818934">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="303" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1599234486186" />
+    <state width="1398" height="337" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1599485818934" />
     <state width="1398" height="276" key="GridCell.Tab.0.bottom/0.23.1440.797@0.23.1440.797" timestamp="1599465448263" />
     <state width="1398" height="338" key="GridCell.Tab.0.bottom/0.23.1440.801/1440.23.1920.1057@0.23.1440.801" timestamp="1591708231692" />
     <state width="1398" height="303" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.23.1920.977@0.23.1440.877" timestamp="1599234261044" />
-    <state width="1398" height="276" key="GridCell.Tab.0.center" timestamp="1599465448262">
-      <screen x="0" y="23" width="1440" height="797" />
+    <state width="1398" height="337" key="GridCell.Tab.0.center" timestamp="1599485818932">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="303" key="GridCell.Tab.0.center/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1599234486183" />
+    <state width="1398" height="337" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1599485818932" />
     <state width="1398" height="276" key="GridCell.Tab.0.center/0.23.1440.797@0.23.1440.797" timestamp="1599465448262" />
     <state width="1398" height="338" key="GridCell.Tab.0.center/0.23.1440.801/1440.23.1920.1057@0.23.1440.801" timestamp="1591708231691" />
     <state width="1398" height="303" key="GridCell.Tab.0.center/0.23.1440.877/1440.23.1920.977@0.23.1440.877" timestamp="1599234261043" />
-    <state width="1398" height="276" key="GridCell.Tab.0.left" timestamp="1599465448261">
-      <screen x="0" y="23" width="1440" height="797" />
+    <state width="1398" height="337" key="GridCell.Tab.0.left" timestamp="1599485818930">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="303" key="GridCell.Tab.0.left/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1599234486180" />
+    <state width="1398" height="337" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1599485818930" />
     <state width="1398" height="276" key="GridCell.Tab.0.left/0.23.1440.797@0.23.1440.797" timestamp="1599465448261" />
     <state width="1398" height="338" key="GridCell.Tab.0.left/0.23.1440.801/1440.23.1920.1057@0.23.1440.801" timestamp="1591708231689" />
     <state width="1398" height="303" key="GridCell.Tab.0.left/0.23.1440.877/1440.23.1920.977@0.23.1440.877" timestamp="1599234261009" />
-    <state width="1398" height="276" key="GridCell.Tab.0.right" timestamp="1599465448262">
-      <screen x="0" y="23" width="1440" height="797" />
+    <state width="1398" height="337" key="GridCell.Tab.0.right" timestamp="1599485818932">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="303" key="GridCell.Tab.0.right/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1599234486185" />
+    <state width="1398" height="337" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1599485818932" />
     <state width="1398" height="276" key="GridCell.Tab.0.right/0.23.1440.797@0.23.1440.797" timestamp="1599465448262" />
     <state width="1398" height="338" key="GridCell.Tab.0.right/0.23.1440.801/1440.23.1920.1057@0.23.1440.801" timestamp="1591708231691" />
     <state width="1398" height="303" key="GridCell.Tab.0.right/0.23.1440.877/1440.23.1920.977@0.23.1440.877" timestamp="1599234261043" />
@@ -291,20 +363,26 @@
     <state x="390" y="282" key="com.intellij.ide.util.TipDialog/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1598862906974" />
     <state x="390" y="273" key="com.intellij.ide.util.TipDialog/0.23.1440.797/1440.23.1920.1057@0.23.1440.797" timestamp="1599139255251" />
     <state x="390" y="273" key="com.intellij.ide.util.TipDialog/0.23.1440.797@0.23.1440.797" timestamp="1599465416350" />
-    <state x="372" y="207" width="766" height="486" key="find.popup" timestamp="1599465840511">
+    <state x="372" y="207" width="766" height="486" key="find.popup" timestamp="1599484736246">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="372" y="207" width="766" height="486" key="find.popup/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1593792378888" />
-    <state x="372" y="207" width="766" height="486" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1599465840511" />
-    <state width="415" height="104" key="javadoc.popup.new" timestamp="1599467462020">
+    <state x="372" y="207" width="766" height="486" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1599484736246" />
+    <state width="415" height="104" key="javadoc.popup.new" timestamp="1599487170962">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="415" height="104" key="javadoc.popup.new/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1599236646081" />
-    <state width="415" height="104" key="javadoc.popup.new/0.0.1440.900@0.0.1440.900" timestamp="1599467462020" />
+    <state width="415" height="104" key="javadoc.popup.new/0.0.1440.900@0.0.1440.900" timestamp="1599487170962" />
+    <state width="415" height="104" key="javadoc.popup.new/0.23.1440.797@0.23.1440.797" timestamp="1599475729733" />
     <state width="415" height="104" key="javadoc.popup.new/0.23.1440.798/1440.23.1920.1057@0.23.1440.798" timestamp="1599218046123" />
+    <state width="415" height="104" key="javadoc.popup.new/0.23.1440.798@0.23.1440.798" timestamp="1599485839684" />
     <state width="415" height="104" key="javadoc.popup.new/0.23.1440.801/1440.23.1920.1057@0.23.1440.801" timestamp="1591718364335" />
     <state width="415" height="104" key="javadoc.popup.new/0.23.1440.804/1440.23.1920.1057@0.23.1440.804" timestamp="1599140456137" />
     <state width="415" height="104" key="javadoc.popup.new/0.23.1440.877/1440.23.1920.977@0.23.1440.877" timestamp="1599146754347" />
+    <state x="482" y="87" key="refactoring.ChangeSignatureDialog" timestamp="1599472032596">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="482" y="87" key="refactoring.ChangeSignatureDialog/0.0.1440.900@0.0.1440.900" timestamp="1599472032596" />
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1593792374821">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

@@ -5,20 +5,17 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.Menu
-import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
-import androidx.appcompat.widget.SearchView
 import androidx.lifecycle.observe
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.artatech.inkbook.recipes.R
 import com.artatech.inkbook.recipes.api.RECIPE_PER_PAGE
-import com.artatech.inkbook.recipes.api.request.CategoryRequest
 import com.artatech.inkbook.recipes.api.response.PaginationRecipesResponse
-import com.artatech.inkbook.recipes.ui.category.presentation.CategoriesAdapter
-import com.artatech.inkbook.recipes.ui.category.presentation.CategoriesViewModel
+import com.artatech.inkbook.recipes.api.response.models.FullRecipeResponse
+import com.artatech.inkbook.recipes.core.utils.RecipePreference
+import com.artatech.inkbook.recipes.ui.recipeshortdetail.RecipeShortDetailActivity
 import com.artatech.inkbook.recipes.ui.subcategory.presentation.CategoryIntentModel
 import kotlinx.android.synthetic.main.recipes_activity.*
 import org.koin.android.ext.android.inject
@@ -138,10 +135,30 @@ class RecipesActivity : AppCompatActivity() {
         this.paginationData = paginationRecipe
 
         if (isFirstPage) {
-            recipesAdapter.setItems(paginationRecipe.recipes)
+            var favoriteRecipes = RecipePreference.recipeFavoriteMap
+            val recipeListener = object : RecipesAdapter.RecipeListener {
+                override fun onClick(item: FullRecipeResponse, itemView: View) {
+                    showShortDetailFragment(item, itemView)
+                    Toast.makeText(this@RecipesActivity, "Feature not implemented yet!", Toast.LENGTH_SHORT).show()
+                }
+
+                override fun onFavoriteClick(item: FullRecipeResponse) {
+                    RecipePreference.addRecipeToFavorite(item)
+                    favoriteRecipes = RecipePreference.recipeFavoriteMap
+                }
+
+                override fun isRecipeInFavorite(id: Int) =
+                    favoriteRecipes?.keys?.contains(id) ?: false
+
+            }
+            recipesAdapter.setItems(paginationRecipe.recipes, recipeListener)
         } else {
             recipesAdapter.addItems(paginationRecipe.recipes)
         }
+    }
+
+    private fun showShortDetailFragment(item: FullRecipeResponse, itemView: View) {
+        RecipeShortDetailActivity.startWithAnimation(this, item, itemView)
     }
 
     private fun getCategoryRequestFromExtra(): CategoryIntentModel {

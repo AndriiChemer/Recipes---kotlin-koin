@@ -9,10 +9,13 @@
 
 
     <color name="goldColor">#EBCD53</color>
+    <color name="blackColor">#000000</color>
 
 
 
     <!--Elements view-->
     <color name="toolbarColor">@color/goldColor</color>
+    <color name="buttonColor">@color/goldColor</color>
+    <color name="textColorBlack">@color/blackColor</color>
 
 </resources>
