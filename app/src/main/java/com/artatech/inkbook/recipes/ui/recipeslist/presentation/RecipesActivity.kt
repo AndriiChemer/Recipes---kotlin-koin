@@ -15,7 +15,7 @@ import com.artatech.inkbook.recipes.api.RECIPE_PER_PAGE
 import com.artatech.inkbook.recipes.api.response.PaginationRecipesResponse
 import com.artatech.inkbook.recipes.api.response.models.FullRecipeResponse
 import com.artatech.inkbook.recipes.core.utils.RecipePreference
-import com.artatech.inkbook.recipes.ui.recipeshortdetail.RecipeShortDetailActivity
+import com.artatech.inkbook.recipes.ui.recipeshortdetail.presentation.RecipeShortDetailActivity
 import com.artatech.inkbook.recipes.ui.subcategory.presentation.CategoryIntentModel
 import kotlinx.android.synthetic.main.recipes_activity.*
 import org.koin.android.ext.android.inject

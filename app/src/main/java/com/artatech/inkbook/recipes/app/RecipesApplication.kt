@@ -20,7 +20,8 @@ class RecipesApplication : Application() {
                     appModule,
                     categoriesModule,
                     subcategoryModule,
-                    recipesModule
+                    recipesModule,
+                    recipeShortDetailsModule
                 )
             )
         }

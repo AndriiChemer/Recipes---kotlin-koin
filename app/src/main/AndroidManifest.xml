@@ -16,7 +16,7 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:name=".ui.recipeshortdetail.RecipeShortDetailActivity" />
+            android:name=".ui.recipeshortdetail.presentation.RecipeShortDetailActivity" />
         <activity
             android:name=".ui.recipeslist.presentation.RecipesActivity" />
         <activity

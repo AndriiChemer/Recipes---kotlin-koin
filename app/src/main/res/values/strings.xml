@@ -2,4 +2,5 @@
     <string name="app_name">Recipes</string>
 
     <string name="button_start_cook">Начать</string>
+    <string name="ingredients_title">Ингредиенты</string>
 </resources>
