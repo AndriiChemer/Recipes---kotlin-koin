@@ -55,7 +55,7 @@ class RecipeShortDetailActivity : AppCompatActivity() {
 
         if (recipe.kitchens.isNotEmpty()) {
             kitchenContainer.visibility = View.VISIBLE
-            kitchenValue.text = recipe.recipe.cookTime
+            kitchenValue.text = recipe.kitchens[0].name
         }
 
         val ingredients = recipe.ingredients
@@ -106,7 +106,7 @@ class RecipeShortDetailActivity : AppCompatActivity() {
 
         // TextView value of ingredient
         val value = TextView(this)
-        value.text = ingredient.value
+        value.text = if (ingredient.value == "") ingredient.description.removeSuffix(")") else ingredient.value
         value.layoutParams = paramsTextView
 
         // TextView space between name and value of ingredient

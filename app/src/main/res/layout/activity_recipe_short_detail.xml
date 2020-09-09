@@ -119,7 +119,7 @@
                     android:textStyle="bold"
                     android:textColor="@color/textColorBlack"
                     android:textSize="24sp"
-                    app:layout_constraintBottom_toTopOf="@+id/description"
+                    app:layout_constraintBottom_toTopOf="@+id/kitchenCookTimeContainer"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
@@ -149,11 +149,12 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="12sp"
+                            android:textSize="14sp"
                             android:textStyle="normal"
-                            android:padding="7dp"
-                            android:paddingStart="10dp"
-                            android:paddingEnd="10dp"
+                            android:paddingTop="7dp"
+                            android:paddingBottom="7dp"
+                            android:paddingStart="0dp"
+                            android:paddingEnd="7dp"
                             android:textColor="@color/textColorBlack"
                             android:text="@string/kitchen" />
 
@@ -161,11 +162,10 @@
                             android:id="@+id/kitchenValue"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="12sp"
+                            android:textSize="14sp"
                             android:textStyle="italic"
-                            android:padding="7dp"
-                            android:paddingStart="10dp"
-                            android:paddingEnd="10dp"
+                            android:paddingTop="7dp"
+                            android:paddingBottom="7dp"
                             android:textColor="@color/textColorBlack"
                             tools:text="Русская" />
 
@@ -182,11 +182,12 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="12sp"
+                            android:textSize="14sp"
                             android:textStyle="normal"
-                            android:padding="7dp"
-                            android:paddingStart="10dp"
-                            android:paddingEnd="10dp"
+                            android:paddingTop="7dp"
+                            android:paddingBottom="7dp"
+                            android:paddingStart="0dp"
+                            android:paddingEnd="7dp"
                             android:textColor="@color/textColorBlack"
                             android:text="@string/cook_time" />
 
@@ -194,33 +195,15 @@
                             android:id="@+id/cookTimeValue"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="12sp"
+                            android:textSize="14sp"
                             android:textStyle="italic"
-                            android:padding="7dp"
-                            android:paddingStart="10dp"
-                            android:paddingEnd="10dp"
+                            android:paddingTop="7dp"
+                            android:paddingBottom="7dp"
                             android:textColor="@color/textColorBlack"
                             tools:text="30 минут" />
 
                     </LinearLayout>
                 </LinearLayout>
-
-                <TextView
-                    android:id="@+id/description"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="10dp"
-                    android:textSize="14sp"
-                    android:textStyle="italic"
-                    android:visibility="invisible"
-                    app:layout_constraintBottom_toTopOf="@+id/ingredients"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/titleRecipe"
-                    tools:text="Some long description about recipe, it can be a comment or description about cook step, also ingredient..." />
 
                 <TextView
                     android:id="@+id/ingredients"
@@ -237,7 +220,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/description"
+                    app:layout_constraintTop_toBottomOf="@+id/kitchenCookTimeContainer"
                      />
 
                 <LinearLayout
