@@ -3,4 +3,6 @@
 
     <string name="button_start_cook">Начать</string>
     <string name="ingredients_title">Ингредиенты</string>
+    <string name="kitchen">Кухня:</string>
+    <string name="cook_time">Время приготовления:</string>
 </resources>

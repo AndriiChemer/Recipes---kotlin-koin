@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.observe
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -53,7 +54,7 @@ class RecipesActivity : AppCompatActivity() {
 
         searchView.setOnSearchClickListener {
             Log.d(TAG, "Search clicked")
-            searchView.background = resources.getDrawable(R.drawable.searchview_rounded_background)
+            searchView.background = ContextCompat.getDrawable(this, R.drawable.searchview_rounded_background)
             toolbarTitle.visibility = View.INVISIBLE
         }
 

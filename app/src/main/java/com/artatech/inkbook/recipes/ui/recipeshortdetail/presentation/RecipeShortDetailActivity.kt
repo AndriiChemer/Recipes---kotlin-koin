@@ -16,13 +16,17 @@ import androidx.core.app.ActivityOptionsCompat
 import com.artatech.inkbook.recipes.R
 import com.artatech.inkbook.recipes.api.response.models.FullRecipeResponse
 import com.artatech.inkbook.recipes.api.response.models.recipe.IngredientResponse
+import com.artatech.inkbook.recipes.core.utils.RecipePreference
 import com.bumptech.glide.Glide
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import kotlinx.android.synthetic.main.activity_recipe_short_detail.*
+import org.koin.android.viewmodel.ext.android.viewModel
 import java.lang.reflect.Type
 
 class RecipeShortDetailActivity : AppCompatActivity() {
+
+    private val viewModel: RecipeShortDetailViewModel by viewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,33 +34,62 @@ class RecipeShortDetailActivity : AppCompatActivity() {
         setContentView(R.layout.activity_recipe_short_detail)
 
         val recipe = getFromExtras()
-        showRecipeDetail(recipe)
-        prepareListener()
-    }
+        val isFavorite = RecipePreference.isFavorite(recipe)
 
-    private fun prepareListener() {
-        buttonBack.setOnClickListener { finish() }
-        buttonStart.setOnClickListener { finish() }
-    }
-
-    private fun installAnimation() {
-        window.requestFeature(Window.FEATURE_CONTENT_TRANSITIONS)
-        window.enterTransition = Explode()
-        window.exitTransition = Explode()
+        showRecipeDetail(recipe, isFavorite)
+        prepareListener(recipe, isFavorite)
     }
 
     @SuppressLint("UseCompatLoadingForDrawables")
-    private fun showRecipeDetail(recipe: FullRecipeResponse) {
+    private fun showRecipeDetail(recipe: FullRecipeResponse, isFavorite: Boolean) {
         Glide.with(this)
             .load(recipe.recipe.imageUrl)
             .into(imageView)
 
         titleRecipe.text = recipe.recipe.name
 
+        if (recipe.recipe.cookTime != null) {
+            cookTimeContainer.visibility = View.VISIBLE
+            cookTimeValue.text = recipe.recipe.cookTime
+        }
+
+        if (recipe.kitchens.isNotEmpty()) {
+            kitchenContainer.visibility = View.VISIBLE
+            kitchenValue.text = recipe.recipe.cookTime
+        }
+
         val ingredients = recipe.ingredients
         ingredients.forEach { ingredient ->
             buildIngredientList(ingredient)
         }
+
+        if (isFavorite) {
+            favoriteButton.setImageResource(R.drawable.ic_star_gold)
+        }
+    }
+
+    private fun prepareListener(recipe: FullRecipeResponse, isFavorite: Boolean) {
+        var isFavoriteClick = isFavorite
+        buttonBack.setOnClickListener { finish() }
+        buttonStart.setOnClickListener { finish() }
+        favoriteButton.setOnClickListener {
+
+            if (isFavoriteClick) {
+                isFavoriteClick = false
+                viewModel.removeFromFavorite(recipe)
+                favoriteButton.setImageResource(R.drawable.ic_star_border_gold)
+            } else {
+                isFavoriteClick = true
+                viewModel.addToFavorite(recipe)
+                favoriteButton.setImageResource(R.drawable.ic_star_gold)
+            }
+        }
+    }
+
+    private fun installAnimation() {
+        window.requestFeature(Window.FEATURE_CONTENT_TRANSITIONS)
+        window.enterTransition = Explode()
+        window.exitTransition = Explode()
     }
 
     private fun buildIngredientList(ingredient: IngredientResponse) {

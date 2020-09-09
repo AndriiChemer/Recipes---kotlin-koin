@@ -93,11 +93,27 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/guidelineDescriptionContainer">
 
+                <ImageView
+                    android:id="@+id/favoriteButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_star_border_gold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/gold_favorite_background"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
                 <TextView
                     android:id="@+id/titleRecipe"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="35dp"
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="10dp"
                     android:textStyle="bold"
@@ -108,7 +124,86 @@
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:text="Some long name" />
+                    tools:text="Some long name long name" />
+
+                <LinearLayout
+                    android:id="@+id/kitchenCookTimeContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="20dp"
+                    app:layout_constraintBottom_toTopOf="@+id/ingredients"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/titleRecipe">
+
+                    <LinearLayout
+                        android:id="@+id/kitchenContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        tools:visibility="visible">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:padding="7dp"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:textColor="@color/textColorBlack"
+                            android:text="@string/kitchen" />
+
+                        <TextView
+                            android:id="@+id/kitchenValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:textStyle="italic"
+                            android:padding="7dp"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:textColor="@color/textColorBlack"
+                            tools:text="Русская" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/cookTimeContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        tools:visibility="visible">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:padding="7dp"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:textColor="@color/textColorBlack"
+                            android:text="@string/cook_time" />
+
+                        <TextView
+                            android:id="@+id/cookTimeValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:textStyle="italic"
+                            android:padding="7dp"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:textColor="@color/textColorBlack"
+                            tools:text="30 минут" />
+
+                    </LinearLayout>
+                </LinearLayout>
 
                 <TextView
                     android:id="@+id/description"
@@ -119,6 +214,7 @@
                     android:layout_marginEnd="10dp"
                     android:textSize="14sp"
                     android:textStyle="italic"
+                    android:visibility="invisible"
                     app:layout_constraintBottom_toTopOf="@+id/ingredients"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"

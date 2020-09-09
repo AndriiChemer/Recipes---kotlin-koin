@@ -62,4 +62,16 @@ object RecipePreference {
             recipeFavoriteMap = favoriteMap
         }
     }
+
+    fun removeRecipeFromFavorite(item: FullRecipeResponse) {
+        val favoriteMap: HashMap<Int, FullRecipeResponse>? = recipeFavoriteMap
+
+        if (favoriteMap?.keys?.contains(item.recipe.id)!!) {
+            favoriteMap.remove(item.recipe.id)
+            recipeFavoriteMap = favoriteMap
+        }
+    }
+
+    fun isFavorite(item: FullRecipeResponse) =
+        recipeFavoriteMap?.keys?.contains(item.recipe.id) ?: false
 }

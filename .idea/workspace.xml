@@ -11,23 +11,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0214b7ba-59e7-4f9a-ac54-5642183390a4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-nodpi/airgrill.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-nodpi/bakery.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-nodpi/desserts.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-nodpi/drinks.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-nodpi/hot_dish.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-nodpi/lawash.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-nodpi/porridge.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-nodpi/salads.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-nodpi/snacks.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-nodpi/soup.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/custom_close_button.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_arrow_back.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_close.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/font/amarant_regular.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/font/amaranth_bold.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/values/font_certs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/values/preloaded_fonts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/api/response/models/recipe/KitchenResponse.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/gold_favorite_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_star_border_gold.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_star_gold.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/textview_background_item.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.bin" afterDir="false" />
@@ -40,15 +28,12 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/app/di/NetworkModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/app/di/NetworkModule.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/ui/category/presentation/CategoriesActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/ui/category/presentation/CategoriesActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/ui/category/presentation/CategoriesAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/ui/category/presentation/CategoriesAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/api/response/models/FullRecipeResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/api/response/models/FullRecipeResponse.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/core/utils/RecipePreference.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/core/utils/RecipePreference.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/ui/recipeshortdetail/presentation/RecipeShortDetailActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/ui/recipeshortdetail/presentation/RecipeShortDetailActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/ui/recipeshortdetail/presentation/RecipeShortDetailViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/ui/recipeshortdetail/presentation/RecipeShortDetailViewModel.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/ui/recipeslist/presentation/RecipesActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/ui/recipeslist/presentation/RecipesActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_recipe_short_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_recipe_short_detail.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_recipe_short_detail1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_recipe_short_detail1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/category_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/category_item.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,8 +60,8 @@
         <option value="Kotlin Interface" />
         <option value="valueResourceFile" />
         <option value="layoutResourceFile" />
-        <option value="Kotlin Class" />
         <option value="Kotlin File" />
+        <option value="Kotlin Class" />
         <option value="resourceFile" />
       </list>
     </option>
@@ -267,11 +252,13 @@
     </state>
     <state x="308" y="212" key="AndroidCreateResourceDirectoryDialog/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1599217577164" />
     <state x="308" y="212" key="AndroidCreateResourceDirectoryDialog/0.0.1440.900@0.0.1440.900" timestamp="1599484066021" />
-    <state x="308" y="212" key="AndroidCreateResourceFileDialog" timestamp="1599484132214">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="308" y="211" key="AndroidCreateResourceFileDialog" timestamp="1599649229661">
+      <screen x="0" y="23" width="1440" height="797" />
     </state>
     <state x="308" y="212" key="AndroidCreateResourceFileDialog/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1599218757317" />
     <state x="308" y="212" key="AndroidCreateResourceFileDialog/0.0.1440.900@0.0.1440.900" timestamp="1599484132214" />
+    <state x="308" y="211" key="AndroidCreateResourceFileDialog/0.23.1440.797/1440.23.1920.1057@0.23.1440.797" timestamp="1599649229660" />
+    <state x="308" y="230" key="AndroidCreateResourceFileDialog/0.23.1440.877/1440.23.1920.977@0.23.1440.877" timestamp="1599644291836" />
     <state x="576" y="222" key="AndroidProcessChooserDialog" timestamp="1599234246236">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -371,17 +358,18 @@
     </state>
     <state x="372" y="207" width="766" height="486" key="find.popup/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1593792378888" />
     <state x="372" y="207" width="766" height="486" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1599484736246" />
-    <state width="415" height="104" key="javadoc.popup.new" timestamp="1599643466566">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state width="415" height="95" key="javadoc.popup.new" timestamp="1599649482859">
+      <screen x="0" y="23" width="1440" height="797" />
     </state>
     <state width="415" height="104" key="javadoc.popup.new/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1599638407774" />
     <state width="415" height="104" key="javadoc.popup.new/0.0.1440.900@0.0.1440.900" timestamp="1599576213046" />
+    <state width="415" height="95" key="javadoc.popup.new/0.23.1440.797/1440.23.1920.1057@0.23.1440.797" timestamp="1599649482859" />
     <state width="415" height="104" key="javadoc.popup.new/0.23.1440.797@0.23.1440.797" timestamp="1599566096871" />
     <state width="415" height="104" key="javadoc.popup.new/0.23.1440.798/1440.23.1920.1057@0.23.1440.798" timestamp="1599642141034" />
     <state width="415" height="104" key="javadoc.popup.new/0.23.1440.798@0.23.1440.798" timestamp="1599485839684" />
     <state width="415" height="104" key="javadoc.popup.new/0.23.1440.801/1440.23.1920.1057@0.23.1440.801" timestamp="1591718364335" />
     <state width="415" height="104" key="javadoc.popup.new/0.23.1440.804/1440.23.1920.1057@0.23.1440.804" timestamp="1599140456137" />
-    <state width="415" height="104" key="javadoc.popup.new/0.23.1440.877/1440.23.1920.977@0.23.1440.877" timestamp="1599643466566" />
+    <state width="415" height="104" key="javadoc.popup.new/0.23.1440.877/1440.23.1920.977@0.23.1440.877" timestamp="1599646113212" />
     <state x="482" y="87" key="refactoring.ChangeSignatureDialog" timestamp="1599472032596">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
