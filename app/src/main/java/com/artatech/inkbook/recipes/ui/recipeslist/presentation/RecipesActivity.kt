@@ -139,7 +139,6 @@ class RecipesActivity : AppCompatActivity() {
             val recipeListener = object : RecipesAdapter.RecipeListener {
                 override fun onClick(item: FullRecipeResponse, itemView: View) {
                     showShortDetailFragment(item, itemView)
-                    Toast.makeText(this@RecipesActivity, "Feature not implemented yet!", Toast.LENGTH_SHORT).show()
                 }
 
                 override fun onFavoriteClick(item: FullRecipeResponse) {

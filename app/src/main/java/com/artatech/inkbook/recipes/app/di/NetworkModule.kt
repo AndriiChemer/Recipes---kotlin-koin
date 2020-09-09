@@ -9,7 +9,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 
-const val RECIPE_GENERAL_API_URL = "http://192.168.0.165:3000/"
+const val RECIPE_GENERAL_API_URL = "http://192.168.0.164:3000/"
 
 val networkModule = module {
     // single instance as a singleton

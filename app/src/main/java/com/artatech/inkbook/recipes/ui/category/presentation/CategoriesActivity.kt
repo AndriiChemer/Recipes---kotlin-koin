@@ -1,7 +1,9 @@
 package com.artatech.inkbook.recipes.ui.category.presentation
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.lifecycle.observe
 import androidx.recyclerview.widget.RecyclerView
@@ -51,8 +53,12 @@ class CategoriesActivity : AppCompatActivity() {
 
     private fun observeData() {
         viewModel.categories.observe(this) {
-            categoriesAdapter.setCategories(it)
+            categoriesAdapter.setCategories(getContext(), it)
         }
+    }
+
+    private fun getContext(): Context {
+        return this
     }
 
     private fun observeError() {

@@ -23,6 +23,7 @@ import kotlinx.android.synthetic.main.activity_recipe_short_detail.*
 import java.lang.reflect.Type
 
 class RecipeShortDetailActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         installAnimation()
@@ -30,6 +31,12 @@ class RecipeShortDetailActivity : AppCompatActivity() {
 
         val recipe = getFromExtras()
         showRecipeDetail(recipe)
+        prepareListener()
+    }
+
+    private fun prepareListener() {
+        buttonBack.setOnClickListener { finish() }
+        buttonStart.setOnClickListener { finish() }
     }
 
     private fun installAnimation() {
