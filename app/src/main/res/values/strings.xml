@@ -5,4 +5,8 @@
     <string name="ingredients_title">Ингредиенты</string>
     <string name="kitchen">Кухня:</string>
     <string name="cook_time">Время приготовления:</string>
+    <string name="Kcal">Ккал</string>
+    <string name="squirrels">Белки</string>
+    <string name="grease">Жиры</string>
+    <string name="carbohydrates">Углеводы</string>
 </resources>

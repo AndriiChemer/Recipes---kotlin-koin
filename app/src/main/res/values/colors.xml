@@ -10,6 +10,7 @@
 
     <color name="goldColor">#EBCD53</color>
     <color name="blackColor">#000000</color>
+    <color name="whiteColor">#ffffff</color>
 
 
 
@@ -17,5 +18,8 @@
     <color name="toolbarColor">@color/goldColor</color>
     <color name="buttonColor">@color/goldColor</color>
     <color name="textColorBlack">@color/blackColor</color>
+    <color name="dividerColor">@color/blackColor</color>
+    <color name="backgroundColor">#F5F5F5</color>
+    <color name="lightContainerColor">@color/whiteColor</color>
 
 </resources>

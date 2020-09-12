@@ -15,16 +15,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:name=".ui.recipeshortdetail.presentation.RecipeShortDetailActivity" />
+            android:name=".ui.recipedetail.presentation.RecipeDetailActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <activity
+            android:name=".ui.recipeshortdetail.presentation.RecipeShortDetailActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
         <activity
             android:name=".ui.recipeslist.presentation.RecipesActivity" />
+
         <activity
             android:name=".ui.subcategory.presentation.SubcategoryActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
         <activity
             android:name=".ui.category.presentation.CategoriesActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
         <activity
             android:name=".MainActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">

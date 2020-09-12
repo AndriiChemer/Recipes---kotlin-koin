@@ -36,3 +36,11 @@ fun ImageView.loadRoundedImage(url: String, radius: Int, listener: RequestListen
         .transform(CenterCrop(), RoundedCorners(radius))
         .into(this)
 }
+
+fun ImageView.loadRoundedImage(res: Int, radius: Int, listener: RequestListener<Drawable>) {
+    Glide.with(this)
+        .load(res)
+        .listener(listener)
+        .transform(RoundedCorners(radius))
+        .into(this)
+}
