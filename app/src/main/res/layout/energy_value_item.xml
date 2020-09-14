@@ -10,15 +10,17 @@
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@+id/kitchenIcon">
 
-<TextView
-    android:id="@+id/energyTitle"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:textColor="@color/textColorBlack"
-    app:layout_constraintEnd_toEndOf="@+id/grease_value"
-    app:layout_constraintStart_toStartOf="@+id/kcal_value"
-    app:layout_constraintTop_toTopOf="parent"
-    tools:text="Готового блюда" />
+    <TextView
+        android:id="@+id/energyTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/textColorBlack"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/carbohydrates_value"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/kcal_value"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Готового блюда" />
 
 <TextView
     android:id="@+id/kcal_value"

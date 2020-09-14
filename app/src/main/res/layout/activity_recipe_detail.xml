@@ -23,7 +23,7 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginEnd="40dp"
-        android:background="@drawable/custom_start_border_button"
+        android:background="@drawable/custom_favorite_border_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/guidelineScrollView"/>
@@ -76,7 +76,7 @@
         android:fillViewport="true">
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/startDescriptionGuideline"
@@ -102,10 +102,12 @@
                 app:layout_constraintTop_toTopOf="@+id/startDescriptionGuideline" >
 
                 <TextView
-                    android:id="@+id/title"
+                    android:id="@+id/recipeTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
                     android:lines="2"
                     android:textColor="@color/textColorBlack"
                     android:textSize="20sp"
@@ -120,9 +122,11 @@
                     android:id="@+id/shortDescriptionContainer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
                     android:orientation="horizontal"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/title">
+                    app:layout_constraintTop_toBottomOf="@+id/recipeTitle">
 
                     <ImageView
                         android:id="@+id/kitchenIcon"
@@ -142,7 +146,7 @@
                         android:id="@+id/kitchenSpace"
                         android:layout_weight="1"
                         android:layout_width="0dp"
-                        android:layout_height="0dp" />
+                        android:layout_height="1dp" />
 
                     <ImageView
                         android:id="@+id/cookTimeIcon"
@@ -163,7 +167,7 @@
                         android:id="@+id/cookTimeSpace"
                         android:layout_weight="1"
                         android:layout_width="0dp"
-                        android:layout_height="0dp" />
+                        android:layout_height="1dp" />
 
                     <ImageView
                         android:id="@+id/portionCountIcon"
@@ -185,17 +189,47 @@
 
 
                 <LinearLayout
+                    android:id="@+id/energyTable"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/shortDescriptionContainer">
+                    app:layout_constraintTop_toBottomOf="@+id/shortDescriptionContainer" />
 
-                    <include layout="@layout/energy_value_item" />
-                    <!--TODO show more items animation-->
-<!--                    <include layout="@layout/energy_value_item" />-->
-<!--                    <include layout="@layout/energy_value_item" />-->
+                <LinearLayout
+                    android:id="@+id/collapsableEnergyTable"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:animateLayoutChanges="true"
+                    android:visibility="gone"
+                    tools:visibility="visible"
+                    tools:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/energyTable">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/collapseExpandButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/collapsableEnergyTable"
+                    android:orientation="horizontal" >
+
+                    <ImageButton
+                        android:id="@+id/collapseExpandImage"
+                        android:layout_width="40dp"
+                        android:layout_height="5dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/close"
+                        app:layout_constraintTop_toBottomOf="@+id/collapsableEnergyTable"
+                        />
                 </LinearLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>

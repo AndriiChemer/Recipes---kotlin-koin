@@ -2,6 +2,7 @@ package com.artatech.inkbook.recipes.app
 
 import android.app.Application
 import com.artatech.inkbook.recipes.app.di.*
+import com.artatech.inkbook.recipes.app.di.screens.*
 import com.artatech.inkbook.recipes.core.utils.RecipePreference
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
@@ -21,7 +22,8 @@ class RecipesApplication : Application() {
                     categoriesModule,
                     subcategoryModule,
                     recipesModule,
-                    recipeShortDetailsModule
+                    recipeShortDetailsModule,
+                    recipeDetailsModule
                 )
             )
         }

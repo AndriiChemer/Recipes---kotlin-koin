@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         openRecipeDetailButton.setOnClickListener {
-            RecipeDetailActivity.start(this)
+
         }
     }
 }

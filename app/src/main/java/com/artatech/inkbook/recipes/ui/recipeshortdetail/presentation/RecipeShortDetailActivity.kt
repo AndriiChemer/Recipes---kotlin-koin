@@ -17,6 +17,7 @@ import com.artatech.inkbook.recipes.R
 import com.artatech.inkbook.recipes.api.response.models.FullRecipeResponse
 import com.artatech.inkbook.recipes.api.response.models.recipe.IngredientResponse
 import com.artatech.inkbook.recipes.core.utils.RecipePreference
+import com.artatech.inkbook.recipes.ui.recipedetail.presentation.RecipeDetailActivity
 import com.bumptech.glide.Glide
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
@@ -71,7 +72,7 @@ class RecipeShortDetailActivity : AppCompatActivity() {
     private fun prepareListener(recipe: FullRecipeResponse, isFavorite: Boolean) {
         var isFavoriteClick = isFavorite
         buttonBack.setOnClickListener { finish() }
-        buttonStart.setOnClickListener { finish() }
+        buttonStart.setOnClickListener { RecipeDetailActivity.star(this, recipe) }
         favoriteButton.setOnClickListener {
 
             if (isFavoriteClick) {
