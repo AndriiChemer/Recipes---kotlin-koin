@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="30dp"
+    android:orientation="vertical"
+    android:background="@drawable/white_rounded_background">
+
+    <TextView
+        android:id="@+id/ingredients"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="10dp"
+        android:textStyle="bold"
+        android:textColor="@color/textColorBlack"
+        android:textSize="18sp"
+        android:text="@string/ingredients_title"
+        />
+
+    <LinearLayout
+        android:id="@+id/ingredientsTable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"/>
+
+    <LinearLayout
+        android:id="@+id/ingredientsExpandedTable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"/>
+
+    <LinearLayout
+        android:id="@+id/ingredientsCollapseExpandButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="vertical" >
+
+        <ImageButton
+            android:id="@+id/collapseExpandIngredientImage"
+            android:layout_width="40dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/close"
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
+
+</LinearLayout>

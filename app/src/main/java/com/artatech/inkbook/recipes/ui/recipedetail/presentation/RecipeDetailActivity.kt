@@ -9,10 +9,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.core.content.ContextCompat
 import com.artatech.inkbook.recipes.R
 import com.artatech.inkbook.recipes.api.response.models.FullRecipeResponse
 import com.artatech.inkbook.recipes.api.response.models.recipe.EnergyResponse
+import com.artatech.inkbook.recipes.api.response.models.recipe.IngredientResponse
 import com.artatech.inkbook.recipes.api.response.models.recipe.KitchenResponse
 import com.artatech.inkbook.recipes.api.response.models.recipe.RecipeResponse
 import com.artatech.inkbook.recipes.core.utils.ExpandOrCollapse
@@ -53,8 +55,55 @@ class RecipeDetailActivity : AppCompatActivity() {
         showKitchen(recipe.kitchens)
         showCookTime(recipe.recipe)
         showPortionCount(recipe.recipe)
-        showKсalsTable(recipe.energies)
+        showEnergyTable(recipe.energies)
+        showIngredients(recipe.ingredients)
         prepareListeners(isFavorite, recipe)
+    }
+
+    private fun showIngredients(ingredients: List<IngredientResponse>) {
+        ingredients.subList(0, 3).forEach {
+            buildIngredientList(it, ingredientsTable)
+        }
+
+        ingredients.subList(3, ingredients.size).forEach {
+            buildIngredientList(it, ingredientsCollapseTable)
+        }
+    }
+
+    private fun buildIngredientList(ingredient: IngredientResponse, container: LinearLayout) {
+        val linearLayout = LinearLayout(this)
+        linearLayout.orientation = LinearLayout.HORIZONTAL
+
+
+        val paramsTextView = ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
+
+        // TextView name of ingredient
+        val name = TextView(this)
+        name.text = ingredient.name
+        name.layoutParams = paramsTextView
+
+        // TextView value of ingredient
+        val value = TextView(this)
+        value.text = if (ingredient.value == "") ingredient.description.removeSuffix(")") else ingredient.value
+        value.layoutParams = paramsTextView
+
+        // TextView space between name and value of ingredient
+        val param = LinearLayout.LayoutParams(
+            ViewGroup.LayoutParams.WRAP_CONTENT,
+            ViewGroup.LayoutParams.WRAP_CONTENT,
+            1.0f
+        )
+        val space = TextView(this)
+        space.layoutParams = param
+        space.setLines(1)
+
+        //Added to row
+        linearLayout.addView(name)
+        linearLayout.addView(space)
+        linearLayout.addView(value)
+
+        //Add row to column
+        container.addView(linearLayout)
     }
 
     private fun prepareFavoriteButton(isFavorite: Boolean) {
@@ -69,7 +118,7 @@ class RecipeDetailActivity : AppCompatActivity() {
             .into(imageView)
     }
 
-    private fun showKсalsTable(energies: List<EnergyResponse>) {
+    private fun showEnergyTable(energies: List<EnergyResponse>) {
         val energyResponse = energies[0]
         addEnergyViewToContainer(energyResponse, energyTable)
 
@@ -125,32 +174,30 @@ class RecipeDetailActivity : AppCompatActivity() {
         }
     }
 
-    private fun prepareListeners(
-        isFavorite: Boolean,
-        recipe: FullRecipeResponse
-    ) {
-        var isExpanded = false
+    private fun prepareListeners(isFavorite: Boolean, recipe: FullRecipeResponse) {
+        var isEnergyExpanded = false
+        var isTableExpanded = false
         var isFavoriteClick = isFavorite
 
         collapseExpandButton.setOnClickListener {
-            if (isExpanded) {
-                isExpanded = false
+            if (isEnergyExpanded) {
+                isEnergyExpanded = false
                 expandCollapseViewUtils.collapse(collapsableEnergyTable)
                 collapseExpandImage.rotation = 0f
             } else {
-                isExpanded = true
+                isEnergyExpanded = true
                 expandCollapseViewUtils.expand(collapsableEnergyTable)
                 collapseExpandImage.rotation = -180f
             }
         }
 
         collapseExpandImage.setOnClickListener {
-            if (isExpanded) {
-                isExpanded = false
+            if (isEnergyExpanded) {
+                isEnergyExpanded = false
                 expandCollapseViewUtils.collapse(collapsableEnergyTable)
                 collapseExpandImage.rotation = 0f
             } else {
-                isExpanded = true
+                isEnergyExpanded = true
                 expandCollapseViewUtils.expand(collapsableEnergyTable)
                 collapseExpandImage.rotation = -180f
             }
@@ -169,6 +216,18 @@ class RecipeDetailActivity : AppCompatActivity() {
                 isFavoriteClick = true
                 viewModel.addToFavorite(recipe)
                 favoriteButton.background = ContextCompat.getDrawable(this, R.drawable.custom_favorite_button)
+            }
+        }
+
+        ingredientsCollapseExpandButton.setOnClickListener {
+            if (isTableExpanded) {
+                isTableExpanded = false
+                expandCollapseViewUtils.collapse(ingredientsCollapseTable)
+                collapseExpandIngredientImage.rotation = 0f
+            } else {
+                isTableExpanded = true
+                expandCollapseViewUtils.expand(ingredientsCollapseTable)
+                collapseExpandIngredientImage.rotation = -180f
             }
         }
     }
