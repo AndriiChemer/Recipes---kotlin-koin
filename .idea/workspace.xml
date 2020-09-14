@@ -11,7 +11,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0214b7ba-59e7-4f9a-ac54-5642183390a4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/layout_ingredient.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/ui/recipedetail/presentation/CookStepAdapter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/button_round_yellow_clicked.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/button_round_yellow_normal.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/custom_yellow_rounded_button.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_arrow_right.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.bin" afterDir="false" />
@@ -23,9 +28,16 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/api/response/models/recipe/CookStepResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/api/response/models/recipe/CookStepResponse.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/app/di/AppModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/app/di/AppModule.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/app/di/screens/RecipeDetailModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/app/di/screens/RecipeDetailModule.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/ui/recipedetail/presentation/RecipeDetailActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/ui/recipedetail/presentation/RecipeDetailActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/rounded_yelow_bottom_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/rounded_yellow_bottom_background.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_recipe_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_recipe_detail.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_recipe_short_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_recipe_short_detail.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/cook_step_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/cook_step_item.xml" afterDir="false" />
     </list>
+    <list id="be16d9ec-7f4a-4ea3-b66c-a7458aaa214d" name="Button show cook step" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -217,12 +229,25 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="0214b7ba-59e7-4f9a-ac54-5642183390a4" name="Default Changelist" comment="" />
+      <changelist id="be16d9ec-7f4a-4ea3-b66c-a7458aaa214d" name="Button show cook step" comment="" />
       <created>1590575260178</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1590575260178</updated>
     </task>
+    <task id="LOCAL-00001" summary="Button show cook step">
+      <created>1600091949340</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1600091949341</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Button show cook step" />
+    <option name="LAST_COMMIT_MESSAGE" value="Button show cook step" />
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="87" key="#Auto_Import" timestamp="1599657982376">
@@ -281,6 +306,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="568" height="466" key="DebuggerActiveHint/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1599234297287" />
+    <state x="114" y="123" width="1146" height="597" key="DiffContextDialog" timestamp="1600092653343">
+      <screen x="0" y="23" width="1440" height="798" />
+    </state>
+    <state x="114" y="123" width="1146" height="597" key="DiffContextDialog/0.23.1440.798/1440.23.1920.1057@0.23.1440.798" timestamp="1600092653343" />
     <state x="398" y="183" key="Downloadable.Font.Dialog.Size" timestamp="1599643362262">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -361,6 +390,10 @@
     </state>
     <state width="1398" height="303" key="GridCell.Tab.2.right/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1599234486196" />
     <state width="1398" height="303" key="GridCell.Tab.2.right/0.23.1440.798/1440.23.1920.1057@0.23.1440.798" timestamp="1599220047345" />
+    <state x="537" y="344" key="VCS.ChangelistChooser" timestamp="1600092590446">
+      <screen x="0" y="23" width="1440" height="798" />
+    </state>
+    <state x="537" y="344" key="VCS.ChangelistChooser/0.23.1440.798/1440.23.1920.1057@0.23.1440.798" timestamp="1600092590446" />
     <state x="497" y="235" key="chooseDestDirectoryDialog" timestamp="1591698052835">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -376,14 +409,14 @@
     </state>
     <state x="372" y="207" width="766" height="486" key="find.popup/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1593792378888" />
     <state x="372" y="207" width="766" height="486" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1599484736246" />
-    <state width="415" height="104" key="javadoc.popup.new" timestamp="1600087724334">
+    <state width="415" height="104" key="javadoc.popup.new" timestamp="1600093883592">
       <screen x="0" y="23" width="1440" height="798" />
     </state>
     <state width="415" height="104" key="javadoc.popup.new/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1599732889044" />
     <state width="415" height="104" key="javadoc.popup.new/0.0.1440.900@0.0.1440.900" timestamp="1599576213046" />
     <state width="415" height="95" key="javadoc.popup.new/0.23.1440.797/1440.23.1920.1057@0.23.1440.797" timestamp="1600069987428" />
     <state width="415" height="104" key="javadoc.popup.new/0.23.1440.797@0.23.1440.797" timestamp="1599566096871" />
-    <state width="415" height="104" key="javadoc.popup.new/0.23.1440.798/1440.23.1920.1057@0.23.1440.798" timestamp="1600087724334" />
+    <state width="415" height="104" key="javadoc.popup.new/0.23.1440.798/1440.23.1920.1057@0.23.1440.798" timestamp="1600093883592" />
     <state width="415" height="104" key="javadoc.popup.new/0.23.1440.798@0.23.1440.798" timestamp="1599866286422" />
     <state width="415" height="104" key="javadoc.popup.new/0.23.1440.801/1440.23.1920.1057@0.23.1440.801" timestamp="1600085081320" />
     <state width="415" height="104" key="javadoc.popup.new/0.23.1440.801@0.23.1440.801" timestamp="1599870041809" />
@@ -402,5 +435,9 @@
     <state x="385" y="197" width="670" height="601" key="search.everywhere.popup/0.23.1440.798/1440.23.1920.1057@0.23.1440.798" timestamp="1600076729207" />
     <state x="385" y="198" width="670" height="605" key="search.everywhere.popup/0.23.1440.804/1440.23.1920.1057@0.23.1440.804" timestamp="1599904896456" />
     <state x="385" y="214" width="670" height="659" key="search.everywhere.popup/0.23.1440.877/1440.23.1920.977@0.23.1440.877" timestamp="1599728193244" />
+    <state x="31" y="187" key="vcs.ApplyPatchDifferentiatedDialog" timestamp="1600092577693">
+      <screen x="0" y="23" width="1440" height="798" />
+    </state>
+    <state x="31" y="187" key="vcs.ApplyPatchDifferentiatedDialog/0.23.1440.798/1440.23.1920.1057@0.23.1440.798" timestamp="1600092577693" />
   </component>
 </project>

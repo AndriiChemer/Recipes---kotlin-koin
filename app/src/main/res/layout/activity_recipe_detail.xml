@@ -12,6 +12,7 @@
         android:id="@+id/buttonBack"
         android:layout_width="40dp"
         android:layout_height="40dp"
+        android:layout_marginTop="20dp"
         android:layout_marginStart="40dp"
         android:background="@drawable/custom_back_button"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,6 +24,7 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginEnd="40dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/custom_favorite_border_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -62,35 +64,23 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.35"/>
 
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineScrollView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.1"/>
-
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="70dp"
         android:fillViewport="true">
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="130dp"
             android:paddingBottom="20dp">
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/startDescriptionGuideline"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.3" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/descriptionContainer"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="30dp"
+                android:layout_margin="20dp"
                 android:padding="10dp"
                 android:background="@drawable/white_rounded_background"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -232,9 +222,11 @@
 
             <LinearLayout
                 android:id="@+id/ingredientContainer"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
                 android:paddingBottom="10dp"
                 android:orientation="vertical"
                 android:background="@drawable/white_rounded_background"
@@ -299,12 +291,35 @@
 
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:background="@drawable/white_rounded_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ingredientContainer">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    android:layout_margin="20dp"
+                    android:focusable="false"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+            </LinearLayout>
 
 
 
 
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 
 

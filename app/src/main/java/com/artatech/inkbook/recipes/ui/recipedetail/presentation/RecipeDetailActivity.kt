@@ -10,13 +10,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
 import androidx.core.content.ContextCompat
+import androidx.recyclerview.widget.RecyclerView
 import com.artatech.inkbook.recipes.R
 import com.artatech.inkbook.recipes.api.response.models.FullRecipeResponse
-import com.artatech.inkbook.recipes.api.response.models.recipe.EnergyResponse
-import com.artatech.inkbook.recipes.api.response.models.recipe.IngredientResponse
-import com.artatech.inkbook.recipes.api.response.models.recipe.KitchenResponse
-import com.artatech.inkbook.recipes.api.response.models.recipe.RecipeResponse
+import com.artatech.inkbook.recipes.api.response.models.recipe.*
 import com.artatech.inkbook.recipes.core.utils.ExpandOrCollapse
 import com.artatech.inkbook.recipes.core.utils.RecipePreference
 import com.bumptech.glide.Glide
@@ -36,6 +35,8 @@ class RecipeDetailActivity : AppCompatActivity() {
 
     private val viewModel: RecipeDetailViewModel by viewModel()
     private val expandCollapseViewUtils: ExpandOrCollapse by inject()
+    private val cookStepAdapter: CookStepAdapter by inject()
+    private val linearLayoutManager: RecyclerView.LayoutManager by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,6 +51,9 @@ class RecipeDetailActivity : AppCompatActivity() {
 
         recipeTitle.text = recipe.recipe.name
 
+        recyclerView.isFocusable = false
+        descriptionContainer.requestFocus()
+
         prepareFavoriteButton(isFavorite)
         showImage(recipe.recipe.imageUrl)
         showKitchen(recipe.kitchens)
@@ -57,7 +61,20 @@ class RecipeDetailActivity : AppCompatActivity() {
         showPortionCount(recipe.recipe)
         showEnergyTable(recipe.energies)
         showIngredients(recipe.ingredients)
+        showCookSteps(recipe.cookSteps)
         prepareListeners(isFavorite, recipe)
+    }
+
+    private fun showCookSteps(cookSteps: List<CookStepResponse>) {
+        recyclerView.apply {
+            adapter = cookStepAdapter
+            layoutManager = linearLayoutManager
+        }
+        cookStepAdapter.setItems(cookSteps, object : CookStepAdapter.Listener {
+            override fun onCookStepClick(cookStep: CookStepResponse) {
+                Toast.makeText(this@RecipeDetailActivity, "Feature not implemented yet", Toast.LENGTH_LONG).show()
+            }
+        })
     }
 
     private fun showIngredients(ingredients: List<IngredientResponse>) {
@@ -128,6 +145,7 @@ class RecipeDetailActivity : AppCompatActivity() {
 
     }
 
+    @SuppressLint("InflateParams")
     private fun addEnergyViewToContainer(energy: EnergyResponse, container: LinearLayout) {
         val view = LayoutInflater.from(this).inflate(R.layout.energy_value_item, null, false)
 

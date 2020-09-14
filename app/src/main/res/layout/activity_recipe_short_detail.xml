@@ -242,7 +242,7 @@
                     android:id="@+id/buttonStart"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/rounded_yelow_bottom_background"
+                    android:background="@drawable/rounded_yellow_bottom_background"
                     android:text="@string/button_start_cook"
                     app:layout_constraintTop_toBottomOf="@+id/ingredientContainer"
                     app:layout_constraintBottom_toBottomOf="parent"

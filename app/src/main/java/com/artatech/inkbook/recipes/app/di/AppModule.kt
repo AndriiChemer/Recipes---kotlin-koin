@@ -1,6 +1,5 @@
 package com.artatech.inkbook.recipes.app.di
 
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.artatech.inkbook.recipes.api.Repository
