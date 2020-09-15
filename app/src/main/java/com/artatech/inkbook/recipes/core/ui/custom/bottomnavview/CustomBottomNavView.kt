@@ -3,13 +3,20 @@ package com.artatech.inkbook.recipes.core.ui.custom.bottomnavview
 import android.content.Context
 import android.graphics.*
 import android.util.AttributeSet
+import android.view.MenuItem
+import android.view.ViewGroup
+import androidx.annotation.NonNull
 import androidx.core.content.ContextCompat
+import androidx.core.view.iterator
 import com.artatech.inkbook.recipes.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import kotlin.math.floor
 
-class CustomBottomNavView@JvmOverloads constructor(
+class CustomBottomNavView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : BottomNavigationView(context, attrs, defStyleAttr) {
+
+    private lateinit var circleView: ViewGroup
 
     private val SECTION_1 = 6f
     private val SECTION_2 = 2f
@@ -39,6 +46,14 @@ class CustomBottomNavView@JvmOverloads constructor(
 
     init {
         radius = 90
+
+        try {
+            val indexPosition = floor(menu.size() / 2.0).toInt()
+            selectedItemId = menu.getItem(indexPosition).itemId
+        } catch (ex: Exception) {
+            ex.printStackTrace()
+        }
+
 
         with(mPaint) {
             style = Paint.Style.FILL_AND_STROKE
@@ -117,15 +132,15 @@ class CustomBottomNavView@JvmOverloads constructor(
         )
     }
 
-    fun click(index: Int) {
+    fun loadByPosition(index: Int) {
         when (index) {
-            1 -> {
+            0 -> {
                 prepareSelected(SECTION_1)
             }
-            2 -> {
+            1 -> {
                 prepareSelected(SECTION_2)
             }
-            3 -> {
+            2 -> {
                 prepareSelected(SECTION_3)
             }
         }
