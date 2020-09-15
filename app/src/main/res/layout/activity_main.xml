@@ -1,41 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_bright"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/openCategoriesButton"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:id="@+id/openCategoriesButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Open categories screen"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/openRecipeListButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Open recipes screen"
+            app:layout_constraintVertical_bias="0.1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.artatech.inkbook.recipes.core.ui.custom.bottomnavview.CustomBottomNavView
+            android:id="@+id/customBottomBar"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:background="#B72202"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:id="@+id/lin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Open categories screen"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_margin="40dp"
+        android:background="@drawable/bottom_nav_item_selected"
+        android:layout_gravity="bottom|center">
 
-    <Button
-        android:id="@+id/openRecipeListButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Open recipes screen"
-        app:layout_constraintVertical_bias="0.1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/fab_share"
+            android:layout_margin="12dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:elevation="6dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_share"
+            android:visibility="gone"
+            tools:visibility="visible"/>
 
-    <Button
-        android:id="@+id/openRecipeDetailButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Open recipe details"
-        app:layout_constraintVertical_bias="0.2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/fab_search"
+            android:layout_margin="12dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:elevation="6dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_search"
+            android:visibility="visible"
+            tools:visibility="visible"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:id="@+id/fab_favorite"
+            android:layout_margin="12dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:elevation="6dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_favorite"
+            android:visibility="gone"
+            tools:visibility="visible"/>
+    </RelativeLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -49,11 +49,10 @@ class RecipeDetailActivity : AppCompatActivity() {
         val recipe = getFromExtras()
         val isFavorite = RecipePreference.isFavorite(recipe)
 
-        recipeTitle.text = recipe.recipe.name
-
         recyclerView.isFocusable = false
         descriptionContainer.requestFocus()
 
+        recipeTitle.text = recipe.recipe.name
         prepareFavoriteButton(isFavorite)
         showImage(recipe.recipe.imageUrl)
         showKitchen(recipe.kitchens)
@@ -222,6 +221,11 @@ class RecipeDetailActivity : AppCompatActivity() {
         }
 
         buttonBack.setOnClickListener {
+            finish()
+        }
+
+        favoriteButton.setOnClickListener {
+            //TODO realizate it
             finish()
         }
 
