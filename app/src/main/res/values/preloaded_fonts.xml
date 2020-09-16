@@ -3,5 +3,7 @@
     <array name="preloaded_fonts" translatable="false">
         <item>@font/amarant_regular</item>
         <item>@font/amaranth_bold</item>
+        <item>@font/clicker_script</item>
+        <item>@font/mr_de_haviland</item>
     </array>
 </resources>
