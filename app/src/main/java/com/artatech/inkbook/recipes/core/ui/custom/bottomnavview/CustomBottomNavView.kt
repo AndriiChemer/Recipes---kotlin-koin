@@ -16,14 +16,12 @@ class CustomBottomNavView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : BottomNavigationView(context, attrs, defStyleAttr) {
 
-    private lateinit var circleView: ViewGroup
-
     private val SECTION_1 = 6f
     private val SECTION_2 = 2f
     private val SECTION_3 = 1.2f
 
     private val mPath = Path()
-    private val mPaint = Paint()
+    private val mPaint = Paint(Paint.ANTI_ALIAS_FLAG)
 
     /** the radius represent the radius of the fab button  */
     var radius: Int = 0
@@ -57,9 +55,9 @@ class CustomBottomNavView @JvmOverloads constructor(
 
         with(mPaint) {
             style = Paint.Style.FILL_AND_STROKE
-            color = Color.WHITE
+            color = ContextCompat.getColor(context, R.color.layoutBackground)
         }
-        setBackgroundColor(ContextCompat.getColor(context, R.color.darkRedColor))
+        setBackgroundColor(ContextCompat.getColor(context, R.color.navBarBackgroundColor))
     }
 
     override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {

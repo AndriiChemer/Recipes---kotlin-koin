@@ -1,73 +1,79 @@
 package com.artatech.inkbook.recipes
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
-import android.widget.ImageView
+import android.view.MenuItem
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.artatech.inkbook.recipes.ui.category.presentation.CategoriesActivity
-import com.artatech.inkbook.recipes.ui.recipeslist.presentation.RecipesActivity
-import com.artatech.inkbook.recipes.ui.subcategory.presentation.CategoryIntentModel
+import com.artatech.inkbook.recipes.api.response.models.CategoryKitchenTastyResponse
+import com.artatech.inkbook.recipes.api.response.models.category.CategoryModel
+import com.artatech.inkbook.recipes.core.extentions.addFragment
+import com.artatech.inkbook.recipes.core.extentions.getFromExtras
+import com.artatech.inkbook.recipes.core.ui.custom.bottomnavview.CustomBottomNavigation
+import com.artatech.inkbook.recipes.ui.category.presentation.CategoriesFragment
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import kotlinx.android.synthetic.main.activity_main.*
+import org.koin.android.ext.android.inject
+import java.lang.reflect.Type
 
-class MainActivity : AppCompatActivity() {
+class MainActivity: AppCompatActivity() {
+
+    private val categoriesFragment: CategoriesFragment by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        openCategoriesButton.setOnClickListener {
-            val intent = Intent(this, CategoriesActivity::class.java)
-            startActivity(intent)
-        }
+        val model = getFromExtras()//intent.getFromExtras<CategoryKitchenTastyResponse>(MODEL_KEY)
+        val tastyList= model.tastes
+        val kitchenList= model.kitchens
+        val categoriesList= model.categories
 
-        customNavigationScreen.setOnClickListener {
-            val intent = Intent(this, SecondActivity::class.java)
-            startActivity(intent)
-        }
 
-        openRecipeListButton.setOnClickListener {
-            RecipesActivity.start(this, CategoryIntentModel(43, 164, 173, "Солянка"))
-        }
+        prepareBottomNavigationListener()
+        launchCategoriesFragment(categoriesList)
+    }
 
-        customBottomBar.inflateMenu(R.menu.bottom_menu)
-        customBottomBar.selectedItemId = R.id.action_categories
+    private fun launchCategoriesFragment(categoriesList: List<CategoryModel>) {
+        categoriesFragment.setArguments(categoriesList)
 
-        customBottomBar.setOnNavigationItemSelectedListener { item ->
-            when(item.itemId) {
-                R.id.action_kitchen -> {
-                    customBottomBar.loadByPosition(0)
-                    lin.x = customBottomBar.mFirstCurveControlPoint1.x.toFloat()
-                    fab_share.visibility = View.VISIBLE
-                    fab_search.visibility = View.GONE
-                    fab_favorite.visibility = View.GONE
-                    drawAnimation(fab_share)
-                    true
-                }
-                R.id.action_categories -> {
-                    customBottomBar.loadByPosition(1)
-                    lin.x = customBottomBar.mFirstCurveControlPoint1.x.toFloat()
-                    fab_share.visibility = View.GONE
-                    fab_search.visibility = View.VISIBLE
-                    fab_favorite.visibility = View.GONE
-                    drawAnimation(fab_search)
-                    true
-                }
-                R.id.action_favorite -> {
-                    customBottomBar.loadByPosition(2)
-                    lin.x = customBottomBar.mFirstCurveControlPoint1.x.toFloat()
-                    fab_share.visibility = View.GONE
-                    fab_search.visibility = View.GONE
-                    fab_favorite.visibility = View.VISIBLE
-                    drawAnimation(fab_favorite)
-                    true
-                }
-                else -> true
+        addFragment(categoriesFragment, R.id.fragmentContainer)
+    }
+
+    private fun prepareBottomNavigationListener() {
+
+        bottomNavMenu.setOnNavigationItemListener(object : CustomBottomNavigation.ItemClickListener {
+            override fun onItemClick(item: MenuItem) {
+                Toast.makeText(this@MainActivity, "${item.title} clicked!", Toast.LENGTH_SHORT).show()
             }
+        })
+    }
+
+    private fun getFromExtras(): CategoryKitchenTastyResponse {
+        val gson = Gson()
+        val jsonObject = intent.extras?.getString(MODEL_KEY)
+        if (jsonObject != null) {
+            val type: Type = object : TypeToken<CategoryKitchenTastyResponse>() {}.type
+            return gson.fromJson(jsonObject, type)
+        } else {
+            throw NullPointerException("param $MODEL_KEY should not be null!")
         }
     }
 
-    private fun drawAnimation(fabShare: ImageView?) {
+    companion object {
+        private const val MODEL_KEY = "MODEL_KEY"
 
+        fun start(context: Context, categoryKitchenTastyResponse: CategoryKitchenTastyResponse) {
+            val gson = Gson()
+
+            val intent = Intent(context, MainActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            intent.addFlags(Intent.FLAG_ACTIVITY_MULTIPLE_TASK)
+            intent.putExtra(MODEL_KEY, gson.toJson(categoryKitchenTastyResponse))
+
+            context.startActivity(intent)
+        }
     }
 }

@@ -4,19 +4,31 @@
     <item
         android:id="@+id/action_kitchen"
         android:enabled="true"
-        android:icon="@drawable/ic_search"
-        android:title="Кухня"
+        android:icon="@drawable/chef_my4"
+        android:title="@string/kitchens"
         app:showAsAction="ifRoom"/>
     <item
         android:id="@+id/action_categories"
         android:enabled="true"
-        android:icon="@drawable/ic_share"
-        android:title="Категории"
+        android:icon="@drawable/ic_home"
+        android:title="@string/categories"
         app:showAsAction="ifRoom"/>
+<!--    <item-->
+<!--        android:id="@+id/action_timer"-->
+<!--        android:enabled="true"-->
+<!--        android:icon="@drawable/ic_timer"-->
+<!--        android:title="Таймер"-->
+<!--        app:showAsAction="ifRoom"/>-->
+<!--    <item-->
+<!--        android:id="@+id/action_share"-->
+<!--        android:enabled="true"-->
+<!--        android:icon="@drawable/ic_share"-->
+<!--        android:title="Поделиться"-->
+<!--        app:showAsAction="ifRoom"/>-->
     <item
         android:id="@+id/action_favorite"
         android:enabled="true"
-        android:icon="@drawable/ic_favorite"
-        android:title="Любимые"
+        android:icon="@drawable/ic_favorite_black"
+        android:title="@string/favorite"
         app:showAsAction="ifRoom"/>
 </menu>

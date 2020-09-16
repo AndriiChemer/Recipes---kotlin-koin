@@ -23,7 +23,8 @@ class RecipesApplication : Application() {
                     subcategoryModule,
                     recipesModule,
                     recipeShortDetailsModule,
-                    recipeDetailsModule
+                    recipeDetailsModule,
+                    splashModule
                 )
             )
         }

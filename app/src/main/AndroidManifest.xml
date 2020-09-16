@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".SecondActivity"></activity>
+        <activity android:name=".ui.splash.presentation.SplashActivity"></activity>
+        <activity android:name=".MainActivity" />
         <activity
             android:name=".ui.recipedetail.presentation.RecipeDetailActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
@@ -29,7 +30,7 @@
             android:name=".ui.category.presentation.CategoriesActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name=".MainActivity"
+            android:name=".MainActivity1"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

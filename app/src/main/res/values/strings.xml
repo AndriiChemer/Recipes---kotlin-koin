@@ -9,4 +9,7 @@
     <string name="squirrels">Белки</string>
     <string name="grease">Жиры</string>
     <string name="carbohydrates">Углеводы</string>
+    <string name="favorite">Любимые</string>
+    <string name="categories">Категории</string>
+    <string name="kitchens">Кухня</string>
 </resources>

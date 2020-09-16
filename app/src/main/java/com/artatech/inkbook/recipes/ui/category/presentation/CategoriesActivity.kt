@@ -3,7 +3,6 @@ package com.artatech.inkbook.recipes.ui.category.presentation
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.lifecycle.observe
 import androidx.recyclerview.widget.RecyclerView

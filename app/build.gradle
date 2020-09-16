@@ -65,6 +65,7 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
     implementation 'com.github.mmin18:realtimeblurview:1.2.1'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
 
     testImplementation 'junit:junit:4.13'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'

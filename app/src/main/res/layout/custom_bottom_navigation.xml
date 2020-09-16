@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="100dp"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@android:color/transparent">
 
     <RelativeLayout
@@ -13,9 +13,11 @@
             android:id="@+id/customBottomBar"
             android:layout_width="match_parent"
             android:layout_height="72dp"
-            android:background="#B72202"
+            tools:background="@color/navBarBackgroundColor"
             android:layout_gravity="bottom"
             android:layout_alignParentBottom="true"
+            app:itemIconTint="@color/whiteColor"
+            app:itemTextColor="@color/whiteColor"
             app:menu="@menu/bottom_menu"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -27,7 +29,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/bottom_nav_item_selected">
+        android:background="@drawable/background_gradient">
 
         <ImageView
             android:id="@+id/fab"
@@ -35,8 +37,10 @@
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:elevation="6dp"
-            android:layout_centerInParent="true"
-            android:src="@drawable/ic_share"
+            android:padding="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_home"
             android:visibility="visible" />
     </RelativeLayout>
 

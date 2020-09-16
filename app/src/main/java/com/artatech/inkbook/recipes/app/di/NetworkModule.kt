@@ -10,6 +10,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 
 const val RECIPE_GENERAL_API_URL = "http://192.168.0.164:3000/"
+const val RECIPE_IMAGE_WITHOUT_SUFFIX = "http://192.168.0.164:3000/images/"
 
 val networkModule = module {
     // single instance as a singleton

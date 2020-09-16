@@ -13,6 +13,9 @@
     <color name="whiteColor">#ffffff</color>
     <color name="darkRedColor">#B72202</color>
 
+    <color name="mirage">#16172E</color>
+    <color name="mulledWine">#524568</color>
+
 
 
     <!--Elements view-->
@@ -22,5 +25,9 @@
     <color name="dividerColor">@color/blackColor</color>
     <color name="backgroundColor">#F5F5F5</color>
     <color name="lightContainerColor">@color/whiteColor</color>
+
+    <!--Bottom nav menu-->
+    <color name="navBarBackgroundColor">@color/mirage</color>
+    <color name="layoutBackground">@color/mulledWine</color>
 
 </resources>

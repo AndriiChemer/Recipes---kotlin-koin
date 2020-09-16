@@ -3,6 +3,7 @@ package com.artatech.inkbook.recipes.ui.category.presentation
 import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.Drawable
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +11,7 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.artatech.inkbook.recipes.R
 import com.artatech.inkbook.recipes.api.response.models.category.CategoryModel
+import com.artatech.inkbook.recipes.app.di.RECIPE_IMAGE_WITHOUT_SUFFIX
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import kotlinx.android.synthetic.main.category_item.view.*
@@ -55,19 +57,8 @@ class CategoriesAdapter : RecyclerView.Adapter<CategoriesAdapter.CategoryViewHol
 
         fun bind(category: CategoryModel, onCategoryClicked: (category: CategoryModel) -> Unit) {
 
-            val backgroundImage = getCategoryImageById(itemView.context, category.id)
-            if (backgroundImage != null) {
-                itemView.image.measure(View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED), View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED))
-                Glide.with(itemView.context)
-                    .load(backgroundImage)
-                    .thumbnail(0.5f)
-                    .centerCrop()
-                    .diskCacheStrategy(DiskCacheStrategy.ALL)
-                    .into(itemView.image)
-            } else {
-                val color = getRandomColor()
-                itemView.image.setBackgroundColor(color)
-            }
+            Log.d("ANDRII", "categoryImage: ${category.imageName}")
+            loadCategoryImage(category.imageName)
 
             itemView.categoryTitle.text = category.name
 
@@ -83,19 +74,19 @@ class CategoriesAdapter : RecyclerView.Adapter<CategoriesAdapter.CategoryViewHol
             }
         }
 
-        private fun getCategoryImageById(context: Context, id: Int): Drawable? {
-            return when(id) {
-                45 -> ContextCompat.getDrawable(context, R.drawable.salads)
-                47 -> ContextCompat.getDrawable(context, R.drawable.drinks)
-                54 -> ContextCompat.getDrawable(context, R.drawable.porridge)
-                46 -> ContextCompat.getDrawable(context, R.drawable.snacks)
-                52 -> ContextCompat.getDrawable(context, R.drawable.lawash)
-                43 -> ContextCompat.getDrawable(context, R.drawable.soup)
-                50 -> ContextCompat.getDrawable(context, R.drawable.desserts)
-                44 -> ContextCompat.getDrawable(context, R.drawable.hot_dish)
-                49 -> ContextCompat.getDrawable(context, R.drawable.bakery)
-                53 -> ContextCompat.getDrawable(context, R.drawable.airgrill)
-                else -> null
+        private fun loadCategoryImage(imageName: String?) {
+            if (imageName != null) {
+                itemView.image.measure(View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED), View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED))
+                val backgroundImage = RECIPE_IMAGE_WITHOUT_SUFFIX + imageName
+                Glide.with(itemView.context)
+                    .load(backgroundImage)
+                    .thumbnail(0.5f)
+                    .centerCrop()
+                    .diskCacheStrategy(DiskCacheStrategy.ALL)
+                    .into(itemView.image)
+            } else {
+                val color = getRandomColor()
+                itemView.image.setBackgroundColor(color)
             }
         }
 

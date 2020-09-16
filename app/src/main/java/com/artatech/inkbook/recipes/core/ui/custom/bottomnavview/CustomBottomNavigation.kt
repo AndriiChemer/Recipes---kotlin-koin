@@ -7,10 +7,8 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.RelativeLayout
 import androidx.annotation.NonNull
-import androidx.core.content.ContextCompat
 import androidx.core.view.iterator
 import com.artatech.inkbook.recipes.R
-import kotlinx.android.synthetic.main.activity_main.*
 
 class CustomBottomNavigation @JvmOverloads constructor(
     context: Context?,
@@ -33,26 +31,27 @@ class CustomBottomNavigation @JvmOverloads constructor(
 
     fun setOnNavigationItemListener(listener: ItemClickListener) {
         customBottomBar.setOnNavigationItemSelectedListener { item ->
-            //index position in menu item
-            var index = 0
-
-            for (it: MenuItem in customBottomBar.menu) {
-                if (it.itemId != item.itemId) {
-                    index++
-                } else {
-                    break
-                }
-            }
-            customBottomBar.loadByPosition(index)
-            fab.setImageDrawable(item.icon)
-            circle.x = customBottomBar.mFirstCurveControlPoint1.x.toFloat()
-
-
-
+            setItemSelected(item)
             listener.onItemClick(item)
             true
         }
     }
+
+    private fun setItemSelected(item: MenuItem) {
+        var index = 0
+
+        for (it: MenuItem in customBottomBar.menu) {
+            if (it.itemId != item.itemId) {
+                index++
+            } else {
+                break
+            }
+        }
+        customBottomBar.loadByPosition(index)
+        fab.setImageDrawable(item.icon)
+        circle.x = customBottomBar.mFirstCurveControlPoint1.x.toFloat()
+    }
+
 
     interface ItemClickListener {
         fun onItemClick(@NonNull item: MenuItem)
