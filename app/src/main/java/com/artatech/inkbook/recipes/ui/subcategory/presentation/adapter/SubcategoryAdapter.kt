@@ -32,10 +32,10 @@ class SubcategoryAdapter:
     private var activeSectionHeader: SubcategoryItem? = null
     private lateinit var recyclerView: RecyclerView
 
-    override fun setItems(items: List<ListRecyclerItem>, listener: SubcategoryListener) {
-        super.setItems(items, listener)
-        setActiveSection(null, NO_ACTIVE_SECTION_POSITION)
-    }
+//    override fun setItems(items: List<ListRecyclerItem>, listener: SubcategoryWithoutRecCatAdapter.Listener) {
+//        super.setItems(items, listener)
+//        setActiveSection(null, NO_ACTIVE_SECTION_POSITION)
+//    }
 
     override fun onAttachedToRecyclerView(recyclerView: RecyclerView) {
         super.onAttachedToRecyclerView(recyclerView)

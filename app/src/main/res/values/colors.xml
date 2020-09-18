@@ -29,6 +29,8 @@
     <color name="lightContainerColor">@color/whiteColor</color>
 
     <!--Bottom nav menu-->
+    <color name="subcategoryBackground">@color/mirage</color>
+    <color name="recipeCategoryBackground">@color/mulledWine</color>
     <color name="navBarBackgroundColor">@color/mirage</color>
     <color name="layoutBackground">@color/mulledWine</color>
 
