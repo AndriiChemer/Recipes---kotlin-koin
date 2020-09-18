@@ -101,9 +101,12 @@ class SubcategoryFragment : Fragment() {
     }
 
     private fun hideSubcategoryWithoutRecCat() {
-        val params: ConstraintLayout.LayoutParams = recyclerGuidLine.layoutParams as ConstraintLayout.LayoutParams
-        params.guidePercent = 0.0f
-        recyclerGuidLine.layoutParams = params
+//        val params: ConstraintLayout.LayoutParams = recyclerGuidLine.layoutParams as ConstraintLayout.LayoutParams
+//        params.guidePercent = 0.0f
+//        recyclerGuidLine.layoutParams = params
+        val layoutParam = appBarLayout.layoutParams
+        layoutParam.height = 0
+        appBarLayout.layoutParams = layoutParam
     }
 
     private fun observeError() {
