@@ -12,4 +12,6 @@
     <string name="favorite">Любимые</string>
     <string name="categories">Категории</string>
     <string name="kitchens">Кухня</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

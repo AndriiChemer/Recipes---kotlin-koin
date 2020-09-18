@@ -1,5 +1,6 @@
 package com.artatech.inkbook.recipes.ui.category.presentation
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -7,10 +8,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.observe
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.artatech.inkbook.recipes.R
 import com.artatech.inkbook.recipes.api.response.models.category.CategoryModel
+import com.artatech.inkbook.recipes.core.ui.adapter.SpacingItemDecoration
+import com.artatech.inkbook.recipes.ui.FragmentNavigationListener
 import com.artatech.inkbook.recipes.ui.subcategory.presentation.SubcategoryActivity
+import com.artatech.inkbook.recipes.ui.subcategory.presentation.SubcategoryFragment
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import kotlinx.android.synthetic.main.categories_activity.*
@@ -25,24 +30,18 @@ class CategoriesFragment : Fragment() {
         fun newInstance() = CategoriesFragment()
     }
 
+    private val subcategoriesFragment: SubcategoryFragment by inject()
+
     private val viewModel: CategoriesViewModel by viewModel()
     private val categoriesAdapter: CategoriesAdapter by inject()
-    private val linearLayoutManager: RecyclerView.LayoutManager by inject()
+    private var fragmentNavigation: FragmentNavigationListener? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-//        getFromExtras(CATEGORIES_KEY, arguments)
-    }
-
-    private fun getFromExtras(key: String, bundle: Bundle?) {
-        val gson = Gson()
-        val jsonObject = bundle?.getString(key)
-        if (jsonObject != null) {
-            val type: Type = object : TypeToken<List<CategoryModel>>() {}.type
-            val categoryList: List<CategoryModel> = gson.fromJson(jsonObject, type)
-            Toast.makeText(requireContext(), "List size: ${categoryList.size}", Toast.LENGTH_LONG).show()
-        } else {
-            throw Throwable("Bundle does't have categories value")
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        try {
+            fragmentNavigation = context as FragmentNavigationListener?
+        } catch (e: ClassCastException) {
+            e.printStackTrace()
         }
     }
 
@@ -56,6 +55,7 @@ class CategoriesFragment : Fragment() {
         initRecycler()
         observeData()
         observeError()
+        observeCategoryNavigation()
 
         viewModel.onViewCreated(CATEGORIES_KEY, arguments)
     }
@@ -68,7 +68,7 @@ class CategoriesFragment : Fragment() {
         categoriesAdapter.setClickListener(onCategoryClicked)
 
         recyclerView.apply {
-            layoutManager = linearLayoutManager
+            layoutManager = LinearLayoutManager(requireActivity())
             adapter = categoriesAdapter
         }
     }
@@ -96,7 +96,9 @@ class CategoriesFragment : Fragment() {
 
     private fun observeCategoryNavigation() {
         viewModel.navigateToSubcategory.observe(this) {
-            SubcategoryActivity.start(requireContext(), it)
+//            SubcategoryActivity.start(requireContext(), it)
+            subcategoriesFragment.setArguments(it)
+            fragmentNavigation?.onNavigate(subcategoriesFragment)
         }
     }
 

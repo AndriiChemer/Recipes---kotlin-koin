@@ -142,7 +142,7 @@ class RecipesActivity : AppCompatActivity() {
                     showShortDetailFragment(item, itemView)
                 }
 
-                override fun onFavoriteClick(item: FullRecipeResponse) {
+                override fun onFavoriteClick(position: Int, item: FullRecipeResponse) {
                     RecipePreference.addRecipeToFavorite(item)
                     favoriteRecipes = RecipePreference.recipeFavoriteMap
                 }

@@ -14,6 +14,7 @@ class SplashActivity: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_splash)
 
         observeData()
@@ -25,6 +26,14 @@ class SplashActivity: AppCompatActivity() {
     private fun observeData() {
         viewModel.data.observe(this) {
             MainActivity.start(this@SplashActivity, it)
+
+        }
+    }
+
+    override fun onPause() {
+        super.onPause()
+        if (isFinishing) {
+            overridePendingTransition(R.anim.fade_out, R.anim.fade_in)
         }
     }
 

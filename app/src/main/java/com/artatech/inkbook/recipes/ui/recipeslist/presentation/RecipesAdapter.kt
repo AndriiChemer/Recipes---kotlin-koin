@@ -55,12 +55,12 @@ class RecipesAdapter: ClickableAdapter<FullRecipeResponse, RecipesAdapter.Recipe
                     itemView.favoriteIcon.setImageResource(R.drawable.ic_star)
                     true
                 }
-                recipeListener.onFavoriteClick(item)
+                recipeListener.onFavoriteClick(position, item)
 
             }
 
             itemView.darkTransparentBackground.setOnClickListener {
-                recipeListener.onFavoriteClick(item)
+                recipeListener.onFavoriteClick(position, item)
             }
 
             itemView.darkTransparentBackground.setOnClickListener {
@@ -160,7 +160,7 @@ class RecipesAdapter: ClickableAdapter<FullRecipeResponse, RecipesAdapter.Recipe
 
     interface RecipeListener {
         fun onClick(item: FullRecipeResponse, itemView: View)
-        fun onFavoriteClick(item: FullRecipeResponse)
+        fun onFavoriteClick(position: Int, item: FullRecipeResponse)
         fun isRecipeInFavorite(id: Int): Boolean
     }
 }

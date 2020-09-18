@@ -87,6 +87,7 @@ class SubcategoryAdapter:
             if (item is EmptySubcategoryItem) {
 
                 itemView.subcategoryTitle.text = item.name
+                itemView.setBackgroundColor(item.color)
                 itemView.container.setOnClickListener {
                     listener?.onSubcategoryClick(item.id, item.name)
                 }
@@ -108,6 +109,7 @@ class SubcategoryAdapter:
                 setArrow(item)
 
                 subcategoryTitle.text = item.name
+                itemView.setBackgroundColor(item.color)
                 container.setOnClickListener {
                     toggleSectionItemsVisibility(item, position)
                 }
@@ -136,6 +138,7 @@ class SubcategoryAdapter:
                 setShadowEffect(item)
 
                 subcategoryTitle.text = item.name
+                itemView.setBackgroundColor(item.color)
                 container.setOnClickListener {
                     listener?.onRecipeCategoryClick(item.subcategoryId, item.id, item.name)
                 }
@@ -171,15 +174,16 @@ class SubcategoryAdapter:
         }
     }
 
+
+
+
+
+
     interface SubcategoryListener {
         fun scrollTo(y: Int, delay: Int)
         fun onRecipeCategoryClick(subcategoryId: Int, recipeCategoryId: Int, title: String)
         fun onSubcategoryClick(subcategoryId: Int, title: String)
     }
-
-
-
-
 
 
 

@@ -4,6 +4,7 @@ import com.artatech.inkbook.recipes.core.ui.adapter.ListRecyclerItem
 
 class EmptySubcategoryItem(val id: Int,
                            val name: String,
-                           val categoryId: Int): ListRecyclerItem {
+                           val categoryId: Int,
+                           val color: Int): ListRecyclerItem {
     override fun getViewType() = EMPTY_SUBCATEGORY_VIEW_TYPE
 }

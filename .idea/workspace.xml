@@ -6,13 +6,20 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0214b7ba-59e7-4f9a-ac54-5642183390a4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/font/clicker_script.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/font/mr_de_haviland.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/app/di/screens/FavoriteRecipesModule.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/core/ui/adapter/SpacingItemDecoration.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/ui/FragmentNavigationListener.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/ui/recipesfavoritelist/presentation/RecipesFavoriteFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/ui/recipesfavoritelist/presentation/RecipesFavoriteViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/ui/recipeslist/presentation/RecipesFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/ui/subcategory/presentation/SubcategoryFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_recipes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_subcategory.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.bin" afterDir="false" />
@@ -23,13 +30,29 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/background_gradient.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/background_gradient.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/preloaded_fonts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/preloaded_fonts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/app/RecipesApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/app/RecipesApplication.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/app/di/screens/SubcategoryModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/app/di/screens/SubcategoryModule.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/core/ui/adapter/BaseAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/core/ui/adapter/BaseAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/ui/category/presentation/CategoriesFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/ui/category/presentation/CategoriesFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/ui/recipeslist/presentation/RecipesActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/ui/recipeslist/presentation/RecipesActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/ui/recipeslist/presentation/RecipesAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/ui/recipeslist/presentation/RecipesAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/ui/recipeslist/presentation/RecipesViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/ui/recipeslist/presentation/RecipesViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/ui/splash/presentation/SplashActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/ui/splash/presentation/SplashActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/ui/subcategory/presentation/SubcategoryActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/ui/subcategory/presentation/SubcategoryActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/ui/subcategory/presentation/SubcategoryViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/ui/subcategory/presentation/SubcategoryViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/ui/subcategory/presentation/adapter/EmptySubcategoryItem.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/ui/subcategory/presentation/adapter/EmptySubcategoryItem.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/ui/subcategory/presentation/adapter/RecipeCategoryItem.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/ui/subcategory/presentation/adapter/RecipeCategoryItem.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/ui/subcategory/presentation/adapter/SubcategoryAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/ui/subcategory/presentation/adapter/SubcategoryAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/ui/subcategory/presentation/adapter/SubcategoryItem.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/artatech/inkbook/recipes/ui/subcategory/presentation/adapter/SubcategoryItem.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/categories_fragment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/categories_fragment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/recipes_activity.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/recipes_activity.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/subcategory_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/subcategory_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <list id="be16d9ec-7f4a-4ea3-b66c-a7458aaa214d" name="Button show cook step" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,13 +79,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin Interface" />
         <option value="Class" />
         <option value="layoutResourceFile" />
         <option value="valueResourceFile" />
         <option value="Kotlin Class" />
-        <option value="Kotlin File" />
         <option value="resourceFile" />
+        <option value="Kotlin File" />
+        <option value="Kotlin Interface" />
       </list>
     </option>
   </component>
@@ -84,8 +107,8 @@
     <property name="DEBUGGABLE_DEVICE" value="Nexus_5X_API_24 [emulator-5554]" />
     <property name="DEBUGGABLE_PROCESS" value="com.artatech.inkbook.recipes" />
     <property name="DEBUGGER_ID" value="Auto" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="20080411" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-09-16T10:31:30.078Z" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Nexus_5X_API_24" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-09-17T07:57:38.216Z" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/customSdk" />
@@ -98,11 +121,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.artatech.inkbook.recipes.ui.recipesfavoritelist.presentation" />
+      <recent name="com.artatech.inkbook.recipes.ui.recipeslist.presentation" />
       <recent name="com.artatech.inkbook.recipes.ui.recipeshortdetail.presentation" />
       <recent name="com.artatech.inkbook.recipes.api.response.models.recipe" />
       <recent name="com.artatech.inkbook.recipes.api.response.models.category" />
-      <recent name="com.artatech.inkbook.recipes.api.request" />
-      <recent name="com.artatech.inkbook.recipes.core.ui.adapter" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/src/main/res/drawable-nodpi" />
@@ -115,6 +138,9 @@
       <recent name="com.artatech.inkbook.recipes.ui.recipeslist.presentation" />
       <recent name="com.artatech.inkbook.recipes.ui.subcategory" />
       <recent name="com.artatech.inkbook.recipes.ui.category" />
+    </key>
+    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="com.artatech.inkbook.recipes.core.ui.adapter" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
@@ -256,17 +282,26 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="320" y="87" key="#Auto_Import/0.23.1440.877/1440.23.1920.977@0.23.1440.877" timestamp="1599657982376" />
+    <state x="417" y="183" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1600440155032">
+      <screen x="0" y="23" width="1440" height="798" />
+    </state>
+    <state x="417" y="183" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.23.1440.798/1440.23.1920.1057@0.23.1440.798" timestamp="1600440155032" />
     <state x="420" y="260" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1599483861219">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="420" y="260" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1599483861219" />
-    <state x="499" y="173" key="#com.intellij.ide.util.MemberChooser" timestamp="1600266240770">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="499" y="177" key="#com.intellij.ide.util.MemberChooser" timestamp="1600443729541">
+      <screen x="0" y="23" width="1440" height="801" />
     </state>
     <state x="499" y="173" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1599236347308" />
     <state x="499" y="173" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1600266240770" />
     <state x="499" y="176" key="#com.intellij.ide.util.MemberChooser/0.23.1440.797/1440.23.1920.1057@0.23.1440.797" timestamp="1600189649367" />
+    <state x="499" y="177" key="#com.intellij.ide.util.MemberChooser/0.23.1440.801/1440.23.1920.1057@0.23.1440.801" timestamp="1600443729541" />
     <state x="499" y="191" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877/1440.23.1920.977@0.23.1440.877" timestamp="1600071196681" />
+    <state x="162" y="382" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1600326602941">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="162" y="382" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1600326602940" />
     <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600279872548">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -277,10 +312,10 @@
     <state x="458" y="205" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.804/1440.23.1920.1057@0.23.1440.804" timestamp="1599906573917" />
     <state x="458" y="221" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1600200150398" />
     <state x="458" y="222" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.877/1440.23.1920.977@0.23.1440.877" timestamp="1599724890960" />
-    <state x="397" y="120" width="667" height="604" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1599562671734">
-      <screen x="0" y="23" width="1440" height="797" />
+    <state x="397" y="109" width="674" height="681" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1600326635573">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="397" y="109" width="650" height="681" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1599140872793" />
+    <state x="397" y="109" width="674" height="681" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1600326635573" />
     <state x="397" y="120" width="667" height="604" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.23.1440.797@0.23.1440.797" timestamp="1599562671734" />
     <state x="495" y="266" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1600252116664">
       <screen x="0" y="23" width="1440" height="804" />
@@ -326,10 +361,10 @@
     </state>
     <state x="398" y="164" width="644" height="476" key="Downloadable.Font.Dialog.Size/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1600279691098" />
     <state x="398" y="183" key="Downloadable.Font.Dialog.Size/0.23.1440.877/1440.23.1920.977@0.23.1440.877" timestamp="1599643362262" />
-    <state width="1398" height="325" key="GridCell.Tab.0.bottom" timestamp="1600277176054">
+    <state width="1398" height="382" key="GridCell.Tab.0.bottom" timestamp="1600330127133">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="325" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1600277176054" />
+    <state width="1398" height="382" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1600330127133" />
     <state width="1398" height="337" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1599485818934" />
     <state width="1304" height="264" key="GridCell.Tab.0.bottom/0.23.1440.797/1440.23.1920.1057@0.23.1440.797" timestamp="1600189423950" />
     <state width="1398" height="276" key="GridCell.Tab.0.bottom/0.23.1440.797@0.23.1440.797" timestamp="1599465448263" />
@@ -339,11 +374,11 @@
     <state width="652" height="196" key="GridCell.Tab.0.bottom/0.23.1440.804@0.23.1440.804" timestamp="1600252392664" />
     <state width="652" height="196" key="GridCell.Tab.0.bottom/0.23.1440.806@0.23.1440.806" timestamp="1600252621046" />
     <state width="1304" height="264" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1600200150632" />
-    <state width="1304" height="244" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.23.1920.977@0.23.1440.877" timestamp="1600174280889" />
-    <state width="1398" height="325" key="GridCell.Tab.0.center" timestamp="1600277176052">
+    <state width="1052" height="325" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.23.1920.977@0.23.1440.877" timestamp="1600323655566" />
+    <state width="1398" height="382" key="GridCell.Tab.0.center" timestamp="1600330127124">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="325" key="GridCell.Tab.0.center/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1600277176052" />
+    <state width="1398" height="382" key="GridCell.Tab.0.center/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1600330127124" />
     <state width="1398" height="337" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1599485818932" />
     <state width="1304" height="264" key="GridCell.Tab.0.center/0.23.1440.797/1440.23.1920.1057@0.23.1440.797" timestamp="1600189423948" />
     <state width="1398" height="276" key="GridCell.Tab.0.center/0.23.1440.797@0.23.1440.797" timestamp="1599465448262" />
@@ -353,11 +388,11 @@
     <state width="652" height="196" key="GridCell.Tab.0.center/0.23.1440.804@0.23.1440.804" timestamp="1600252392663" />
     <state width="652" height="196" key="GridCell.Tab.0.center/0.23.1440.806@0.23.1440.806" timestamp="1600252621044" />
     <state width="1304" height="264" key="GridCell.Tab.0.center/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1600200150632" />
-    <state width="1304" height="244" key="GridCell.Tab.0.center/0.23.1440.877/1440.23.1920.977@0.23.1440.877" timestamp="1600174280887" />
-    <state width="1398" height="325" key="GridCell.Tab.0.left" timestamp="1600277176051">
+    <state width="1052" height="325" key="GridCell.Tab.0.center/0.23.1440.877/1440.23.1920.977@0.23.1440.877" timestamp="1600323655562" />
+    <state width="1398" height="382" key="GridCell.Tab.0.left" timestamp="1600330127120">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="325" key="GridCell.Tab.0.left/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1600277176051" />
+    <state width="1398" height="382" key="GridCell.Tab.0.left/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1600330127120" />
     <state width="1398" height="337" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1599485818930" />
     <state width="1304" height="264" key="GridCell.Tab.0.left/0.23.1440.797/1440.23.1920.1057@0.23.1440.797" timestamp="1600189423948" />
     <state width="1398" height="276" key="GridCell.Tab.0.left/0.23.1440.797@0.23.1440.797" timestamp="1599465448261" />
@@ -367,11 +402,11 @@
     <state width="652" height="196" key="GridCell.Tab.0.left/0.23.1440.804@0.23.1440.804" timestamp="1600252392662" />
     <state width="652" height="196" key="GridCell.Tab.0.left/0.23.1440.806@0.23.1440.806" timestamp="1600252621044" />
     <state width="1304" height="264" key="GridCell.Tab.0.left/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1600200150628" />
-    <state width="1304" height="244" key="GridCell.Tab.0.left/0.23.1440.877/1440.23.1920.977@0.23.1440.877" timestamp="1600174280886" />
-    <state width="1398" height="325" key="GridCell.Tab.0.right" timestamp="1600277176053">
+    <state width="1052" height="325" key="GridCell.Tab.0.left/0.23.1440.877/1440.23.1920.977@0.23.1440.877" timestamp="1600323655552" />
+    <state width="1398" height="382" key="GridCell.Tab.0.right" timestamp="1600330127130">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="325" key="GridCell.Tab.0.right/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1600277176053" />
+    <state width="1398" height="382" key="GridCell.Tab.0.right/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1600330127130" />
     <state width="1398" height="337" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1599485818932" />
     <state width="1304" height="264" key="GridCell.Tab.0.right/0.23.1440.797/1440.23.1920.1057@0.23.1440.797" timestamp="1600189423949" />
     <state width="1398" height="276" key="GridCell.Tab.0.right/0.23.1440.797@0.23.1440.797" timestamp="1599465448262" />
@@ -381,7 +416,7 @@
     <state width="652" height="196" key="GridCell.Tab.0.right/0.23.1440.804@0.23.1440.804" timestamp="1600252392663" />
     <state width="652" height="196" key="GridCell.Tab.0.right/0.23.1440.806@0.23.1440.806" timestamp="1600252621044" />
     <state width="1304" height="264" key="GridCell.Tab.0.right/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1600200150632" />
-    <state width="1304" height="244" key="GridCell.Tab.0.right/0.23.1440.877/1440.23.1920.977@0.23.1440.877" timestamp="1600174280888" />
+    <state width="1052" height="325" key="GridCell.Tab.0.right/0.23.1440.877/1440.23.1920.977@0.23.1440.877" timestamp="1600323655564" />
     <state width="1304" height="244" key="GridCell.Tab.1.bottom" timestamp="1600174280891">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -438,52 +473,51 @@
       <screen x="0" y="23" width="1440" height="798" />
     </state>
     <state x="537" y="344" key="VCS.ChangelistChooser/0.23.1440.798/1440.23.1920.1057@0.23.1440.798" timestamp="1600092590446" />
-    <state x="497" y="235" key="chooseDestDirectoryDialog" timestamp="1591698052835">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="497" y="235" key="chooseDestDirectoryDialog/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1591698052835" />
     <state x="390" y="273" key="com.intellij.ide.util.TipDialog" timestamp="1600152291874">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
     <state x="390" y="282" key="com.intellij.ide.util.TipDialog/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1598862906974" />
     <state x="390" y="273" key="com.intellij.ide.util.TipDialog/0.23.1440.797/1440.23.1920.1057@0.23.1440.797" timestamp="1600152291874" />
     <state x="390" y="273" key="com.intellij.ide.util.TipDialog/0.23.1440.797@0.23.1440.797" timestamp="1599864327762" />
-    <state x="372" y="207" width="766" height="486" key="find.popup" timestamp="1600279916619">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="372" y="207" width="766" height="486" key="find.popup" timestamp="1600444631978">
+      <screen x="0" y="23" width="1440" height="801" />
     </state>
-    <state x="372" y="207" width="766" height="486" key="find.popup/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1600279916619" />
+    <state x="372" y="207" width="766" height="486" key="find.popup/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1600330811793" />
     <state x="372" y="207" width="774" height="486" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1600267701080" />
     <state x="372" y="206" width="766" height="486" key="find.popup/0.23.1440.797/1440.23.1920.1057@0.23.1440.797" timestamp="1600196028823" />
-    <state x="372" y="207" width="766" height="486" key="find.popup/0.23.1440.801/1440.23.1920.1057@0.23.1440.801" timestamp="1600112904168" />
+    <state x="372" y="207" width="774" height="486" key="find.popup/0.23.1440.798/1440.23.1920.1057@0.23.1440.798" timestamp="1600441331860" />
+    <state x="372" y="207" width="766" height="486" key="find.popup/0.23.1440.801/1440.23.1920.1057@0.23.1440.801" timestamp="1600444631978" />
     <state x="372" y="207" width="766" height="489" key="find.popup/0.23.1440.801@0.23.1440.801" timestamp="1600243994161" />
-    <state width="415" height="104" key="javadoc.popup.new" timestamp="1600280310975">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="415" height="104" key="javadoc.popup.new" timestamp="1600444870607">
+      <screen x="0" y="23" width="1440" height="801" />
     </state>
-    <state width="415" height="104" key="javadoc.popup.new/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1600280310975" />
+    <state width="415" height="104" key="javadoc.popup.new/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1600330990717" />
     <state width="415" height="104" key="javadoc.popup.new/0.0.1440.900@0.0.1440.900" timestamp="1600268008756" />
     <state width="415" height="95" key="javadoc.popup.new/0.23.1440.797/1440.23.1920.1057@0.23.1440.797" timestamp="1600196120556" />
     <state width="415" height="104" key="javadoc.popup.new/0.23.1440.797@0.23.1440.797" timestamp="1600241087566" />
-    <state width="415" height="104" key="javadoc.popup.new/0.23.1440.798/1440.23.1920.1057@0.23.1440.798" timestamp="1600093883592" />
+    <state width="415" height="104" key="javadoc.popup.new/0.23.1440.798/1440.23.1920.1057@0.23.1440.798" timestamp="1600442595731" />
     <state width="415" height="104" key="javadoc.popup.new/0.23.1440.798@0.23.1440.798" timestamp="1600265550281" />
-    <state width="415" height="104" key="javadoc.popup.new/0.23.1440.801/1440.23.1920.1057@0.23.1440.801" timestamp="1600085081320" />
+    <state width="415" height="104" key="javadoc.popup.new/0.23.1440.801/1440.23.1920.1057@0.23.1440.801" timestamp="1600444870607" />
     <state width="415" height="104" key="javadoc.popup.new/0.23.1440.801@0.23.1440.801" timestamp="1600258896907" />
     <state width="415" height="104" key="javadoc.popup.new/0.23.1440.804/1440.23.1920.1057@0.23.1440.804" timestamp="1599909908581" />
     <state width="415" height="105" key="javadoc.popup.new/0.23.1440.804@0.23.1440.804" timestamp="1600256520249" />
     <state width="415" height="105" key="javadoc.popup.new/0.23.1440.806/1440.23.1920.1057@0.23.1440.806" timestamp="1599912488659" />
     <state width="415" height="105" key="javadoc.popup.new/0.23.1440.806@0.23.1440.806" timestamp="1600256307790" />
-    <state width="415" height="104" key="javadoc.popup.new/0.23.1440.877/1440.23.1920.977@0.23.1440.877" timestamp="1600173368377" />
-    <state x="482" y="94" key="refactoring.ChangeSignatureDialog" timestamp="1600155777958">
-      <screen x="0" y="23" width="1440" height="797" />
+    <state width="415" height="104" key="javadoc.popup.new/0.23.1440.877/1440.23.1920.977@0.23.1440.877" timestamp="1600427557481" />
+    <state x="482" y="80" key="refactoring.ChangeSignatureDialog" timestamp="1600328650824">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state x="482" y="80" key="refactoring.ChangeSignatureDialog/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1600328650824" />
     <state x="482" y="87" key="refactoring.ChangeSignatureDialog/0.0.1440.900@0.0.1440.900" timestamp="1599472032596" />
     <state x="482" y="94" key="refactoring.ChangeSignatureDialog/0.23.1440.797/1440.23.1920.1057@0.23.1440.797" timestamp="1600155777958" />
-    <state x="385" y="198" width="670" height="605" key="search.everywhere.popup" timestamp="1600243989817">
+    <state x="385" y="198" width="670" height="605" key="search.everywhere.popup" timestamp="1600444156545">
       <screen x="0" y="23" width="1440" height="801" />
     </state>
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1593792374821" />
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1599575078703" />
     <state x="385" y="197" width="670" height="601" key="search.everywhere.popup/0.23.1440.797/1440.23.1920.1057@0.23.1440.797" timestamp="1600155043609" />
     <state x="385" y="197" width="670" height="601" key="search.everywhere.popup/0.23.1440.798/1440.23.1920.1057@0.23.1440.798" timestamp="1600076729207" />
+    <state x="385" y="198" width="670" height="605" key="search.everywhere.popup/0.23.1440.801/1440.23.1920.1057@0.23.1440.801" timestamp="1600444156545" />
     <state x="385" y="198" width="670" height="605" key="search.everywhere.popup/0.23.1440.801@0.23.1440.801" timestamp="1600243989817" />
     <state x="385" y="198" width="670" height="605" key="search.everywhere.popup/0.23.1440.804/1440.23.1920.1057@0.23.1440.804" timestamp="1599904896456" />
     <state x="385" y="214" width="670" height="659" key="search.everywhere.popup/0.23.1440.877/1440.23.1920.977@0.23.1440.877" timestamp="1599728193244" />

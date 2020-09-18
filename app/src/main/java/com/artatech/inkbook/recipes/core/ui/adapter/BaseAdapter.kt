@@ -51,4 +51,9 @@ abstract class BaseAdapter<T : ListRecyclerItem, VH: BaseViewHolder<T>>: Recycle
         this.items.subList(startPosition, endPosition).clear();
         notifyItemRangeRemoved(startPosition, endPosition - startPosition);
     }
+
+    fun removeItem(startPosition: Int, item: T) {
+        val list = arrayListOf(item)
+        removeItems(startPosition, list)
+    }
 }

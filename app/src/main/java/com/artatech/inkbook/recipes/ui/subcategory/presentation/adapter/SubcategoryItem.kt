@@ -7,6 +7,7 @@ class SubcategoryItem(
     val name: String,
     val categoryId: Int,
     var recipeCategories: MutableList<RecipeCategoryItem>,
+    val color: Int,
     var isExpanded: Boolean = false
 ): ListRecyclerItem {
     override fun getViewType() =

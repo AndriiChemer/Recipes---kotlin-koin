@@ -19,9 +19,11 @@
 
 
     <!--Elements view-->
-    <color name="toolbarColor">@color/goldColor</color>
+<!--    <color name="toolbarColor">@color/goldColor</color>-->
+    <color name="toolbarColor">@color/mirage</color>
     <color name="buttonColor">@color/goldColor</color>
     <color name="textColorBlack">@color/blackColor</color>
+    <color name="textColorWhite">@color/whiteColor</color>
     <color name="dividerColor">@color/blackColor</color>
     <color name="backgroundColor">#F5F5F5</color>
     <color name="lightContainerColor">@color/whiteColor</color>
