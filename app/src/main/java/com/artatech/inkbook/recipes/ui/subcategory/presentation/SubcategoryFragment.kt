@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.lifecycle.observe
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -17,15 +16,15 @@ import com.artatech.inkbook.recipes.api.response.models.category.CategoryModel
 import com.artatech.inkbook.recipes.core.ui.adapter.SpacingItemDecoration
 import com.artatech.inkbook.recipes.ui.FragmentNavigationListener
 import com.artatech.inkbook.recipes.ui.subcategory.presentation.adapter.SubcategoriesAdapter
-import com.artatech.inkbook.recipes.ui.subcategory.presentation.adapter.SubcategoryWithoutRecCatAdapter
-import kotlinx.android.synthetic.main.fragment_subcategories.*
+import com.artatech.inkbook.recipes.ui.subcategory.presentation.adapter.EmptySubcategoryAdapter
+import kotlinx.android.synthetic.main.fragment_subcategory.*
 import org.koin.android.viewmodel.ext.android.viewModel
 
 class SubcategoryFragment : Fragment() {
 
     private val viewModel: SubcategoryViewModel by viewModel()
     private val subcategoryAdapter: SubcategoriesAdapter = SubcategoriesAdapter()
-    private val subcategoryWithoutRecCatAdapter: SubcategoryWithoutRecCatAdapter = SubcategoryWithoutRecCatAdapter()
+    private val emptySubcategoryAdapter: EmptySubcategoryAdapter = EmptySubcategoryAdapter()
 
     private var fragmentNavigation: FragmentNavigationListener? = null
 
@@ -39,7 +38,7 @@ class SubcategoryFragment : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View?
-            = inflater.inflate(R.layout.fragment_subcategories, container, false)
+            = inflater.inflate(R.layout.fragment_subcategory, container, false)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -56,7 +55,7 @@ class SubcategoryFragment : Fragment() {
 
         sybcatWithoutRecipeCatRecyclerView.apply {
             layoutManager = LinearLayoutManager(requireActivity(), RecyclerView.HORIZONTAL, false)
-            adapter = subcategoryWithoutRecCatAdapter
+            adapter = emptySubcategoryAdapter
             addItemDecoration(SpacingItemDecoration(40))
         }
 
@@ -86,7 +85,7 @@ class SubcategoryFragment : Fragment() {
             if (it.isEmpty()) {
                 hideSubcategoryWithoutRecCat()
             } else {
-                subcategoryWithoutRecCatAdapter.setItems(it, object : SubcategoryWithoutRecCatAdapter.Listener {
+                emptySubcategoryAdapter.setItems(it, object : EmptySubcategoryAdapter.Listener {
                     override fun onSubcategoryClicked(categoryId: Int, subcategoryId: Int, title: String) {
                         viewModel.onSubcategoryClicked(categoryId, subcategoryId, null, title)
                     }

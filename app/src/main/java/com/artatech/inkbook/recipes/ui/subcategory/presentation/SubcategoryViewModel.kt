@@ -1,6 +1,5 @@
 package com.artatech.inkbook.recipes.ui.subcategory.presentation
 
-import android.graphics.Color
 import android.os.Bundle
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -8,10 +7,9 @@ import com.artatech.inkbook.recipes.api.response.models.category.CategoryModel
 import com.artatech.inkbook.recipes.api.response.models.category.RecipeCategoryModel
 import com.artatech.inkbook.recipes.api.response.models.category.SubcategoryModel
 import com.artatech.inkbook.recipes.core.utils.SingleLiveEvent
-import com.artatech.inkbook.recipes.ui.subcategory.presentation.adapter.EmptySubcategoryItem
-import com.artatech.inkbook.recipes.ui.subcategory.presentation.adapter.RecipeCategoryItem
-import com.artatech.inkbook.recipes.ui.subcategory.presentation.adapter.SubcategoryItem
-import java.util.*
+import com.artatech.inkbook.recipes.ui.subcategory.presentation.adapter.model.EmptySubcategoryItem
+import com.artatech.inkbook.recipes.ui.subcategory.presentation.adapter.model.RecipeCategoryItem
+import com.artatech.inkbook.recipes.ui.subcategory.presentation.adapter.model.SubcategoryItem
 
 class SubcategoryViewModel: ViewModel() {
 
@@ -42,13 +40,11 @@ class SubcategoryViewModel: ViewModel() {
 
         subcategories.forEach { subcategory -> run {
             if (subcategory.recipeCategories.isNotEmpty()) {
-                val color = getRandomColor()
-                val list = convertListRecipeCategory(subcategory.recipeCategories, color)
-                val subcategoryItem = SubcategoryItem(subcategory.id, subcategory.name, subcategory.categoryId, list, color,false)
+                val list = convertListRecipeCategory(subcategory.recipeCategories)
+                val subcategoryItem = SubcategoryItem(subcategory.id, subcategory.name, subcategory.categoryId, list,false)
                 subcategoryAdapterModels.add(subcategoryItem)
             } else {
-                val color = getRandomColor()
-                val subcategoryItem = EmptySubcategoryItem(subcategory.id, subcategory.name, subcategory.categoryId, color)
+                val subcategoryItem = EmptySubcategoryItem(subcategory.id, subcategory.name, subcategory.categoryId)
                 emptySubcategoryAdapterModels.add(subcategoryItem)
             }
         } }
@@ -57,19 +53,14 @@ class SubcategoryViewModel: ViewModel() {
         recipeCategoryData.value = emptySubcategoryAdapterModels
     }
 
-    private fun convertListRecipeCategory(recipeCategories: List<RecipeCategoryModel>, color: Int): MutableList<RecipeCategoryItem> {
+    private fun convertListRecipeCategory(recipeCategories: List<RecipeCategoryModel>): MutableList<RecipeCategoryItem> {
         val recipeCategoryRecyclerList = mutableListOf<RecipeCategoryItem>()
 
         recipeCategories.forEach { recipeCategory -> run {
-            val recipeCategoryItem = RecipeCategoryItem(recipeCategory.id, recipeCategory.name, recipeCategory.subcategoryId, color)
+            val recipeCategoryItem = RecipeCategoryItem(recipeCategory.id, recipeCategory.name, recipeCategory.subcategoryId)
             recipeCategoryRecyclerList.add(recipeCategoryItem)
         } }
 
         return recipeCategoryRecyclerList
-    }
-
-    private fun getRandomColor(): Int {
-        val random = Random()
-        return Color.argb(255, random.nextInt(256), random.nextInt(256), random.nextInt(256))
     }
 }

@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import com.artatech.inkbook.recipes.R
 import com.artatech.inkbook.recipes.core.ui.adapter.BaseViewHolder
 import com.artatech.inkbook.recipes.core.ui.adapter.ClickableAdapter
+import com.artatech.inkbook.recipes.ui.subcategory.presentation.adapter.model.RecipeCategoryItem
 import kotlinx.android.synthetic.main.item_recipe_category.view.*
 
 class RecipeCategoryAdapter: ClickableAdapter<RecipeCategoryItem, RecipeCategoryAdapter.RecipeCategoryViewHolder, RecipeCategoryAdapter.Listener>() {

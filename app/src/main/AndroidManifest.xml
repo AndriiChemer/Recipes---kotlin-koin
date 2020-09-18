@@ -24,10 +24,10 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".ui.recipeslist.presentation.RecipesActivity" />
         <activity
-            android:name=".ui.subcategory.presentation.SubcategoryActivity"
+            android:name=".depricated.SubcategoryActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name=".ui.category.presentation.CategoriesActivity"
+            android:name=".depricated.CategoriesActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".MainActivity1"

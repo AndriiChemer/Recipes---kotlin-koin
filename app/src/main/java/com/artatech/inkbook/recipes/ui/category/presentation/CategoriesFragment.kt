@@ -9,19 +9,14 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.observe
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.artatech.inkbook.recipes.R
 import com.artatech.inkbook.recipes.api.response.models.category.CategoryModel
-import com.artatech.inkbook.recipes.core.ui.adapter.SpacingItemDecoration
 import com.artatech.inkbook.recipes.ui.FragmentNavigationListener
-import com.artatech.inkbook.recipes.ui.subcategory.presentation.SubcategoryActivity
 import com.artatech.inkbook.recipes.ui.subcategory.presentation.SubcategoryFragment
 import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
 import kotlinx.android.synthetic.main.categories_activity.*
 import org.koin.android.ext.android.inject
 import org.koin.android.viewmodel.ext.android.viewModel
-import java.lang.reflect.Type
 
 class CategoriesFragment : Fragment() {
 

@@ -9,6 +9,8 @@ import com.artatech.inkbook.recipes.R
 import com.artatech.inkbook.recipes.core.ui.adapter.BaseViewHolder
 import com.artatech.inkbook.recipes.core.ui.adapter.ClickableAdapter
 import com.artatech.inkbook.recipes.core.ui.adapter.SpacingItemDecoration
+import com.artatech.inkbook.recipes.ui.subcategory.presentation.adapter.model.RecipeCategoryItem
+import com.artatech.inkbook.recipes.ui.subcategory.presentation.adapter.model.SubcategoryItem
 import kotlinx.android.synthetic.main.item_subcategory.view.*
 
 class SubcategoriesAdapter: ClickableAdapter<SubcategoryItem, SubcategoriesAdapter.SubcategoryViewHolder, SubcategoriesAdapter.SubcategoryListener>() {

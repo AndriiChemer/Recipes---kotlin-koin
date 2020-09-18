@@ -3,7 +3,7 @@ package com.artatech.inkbook.recipes
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.artatech.inkbook.recipes.ui.category.presentation.CategoriesActivity
+import com.artatech.inkbook.recipes.depricated.CategoriesActivity
 import com.artatech.inkbook.recipes.ui.recipeslist.presentation.RecipesActivity
 import com.artatech.inkbook.recipes.ui.splash.presentation.SplashActivity
 import com.artatech.inkbook.recipes.ui.subcategory.presentation.CategoryIntentModel
