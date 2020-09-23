@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".ui.splash.presentation.SplashActivity"></activity>
+        <activity android:name=".CustomCategoryActivity"></activity>
+        <activity android:name=".ui.splash.presentation.SplashActivity" />
         <activity android:name=".MainActivity" />
         <activity
             android:name=".ui.recipedetail.presentation.RecipeDetailActivity"

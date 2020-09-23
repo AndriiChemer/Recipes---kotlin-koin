@@ -17,7 +17,7 @@ fun ImageView.loadImage(url: String) {
 fun ImageView.loadImageRounded(url: String) {
     Glide.with(this)
         .load(url)
-        .transform(CenterCrop(), RoundedCorners(60))
+        .transform(CenterCrop(), RoundedCorners(70))
         .into(this)
 }
 

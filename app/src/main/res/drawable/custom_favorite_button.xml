@@ -12,6 +12,6 @@
         </shape>
     </item>
 
-    <item android:drawable="@drawable/ic_favorite" />
+    <item android:drawable="@drawable/ic_favorite_gold" />
 
 </layer-list>

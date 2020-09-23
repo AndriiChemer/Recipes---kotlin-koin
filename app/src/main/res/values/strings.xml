@@ -14,4 +14,6 @@
     <string name="kitchens">Кухня</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="kitchen_title">Кухня</string>
+    <string name="tasties">Вкусы</string>
 </resources>

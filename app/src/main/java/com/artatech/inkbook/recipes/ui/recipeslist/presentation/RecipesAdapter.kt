@@ -41,18 +41,18 @@ class RecipesAdapter: ClickableAdapter<FullRecipeResponse, RecipesAdapter.Recipe
 
             itemView.favoriteIcon.let {
                 if (isFavorite) {
-                    it.setImageResource(R.drawable.ic_star)
+                    it.setImageResource(R.drawable.ic_favorite_white)
                 } else {
-                    it.setImageResource(R.drawable.ic_star_border)
+                    it.setImageResource(R.drawable.ic_favorite_border_white)
                 }
             }
 
             itemView.favoriteIcon.setOnClickListener {
                 isFavorite = if (isFavorite) {
-                    itemView.favoriteIcon.setImageResource(R.drawable.ic_star_border)
+                    itemView.favoriteIcon.setImageResource(R.drawable.ic_favorite_border_white)
                     false
                 } else {
-                    itemView.favoriteIcon.setImageResource(R.drawable.ic_star)
+                    itemView.favoriteIcon.setImageResource(R.drawable.ic_favorite_white)
                     true
                 }
                 recipeListener.onFavoriteClick(position, item)

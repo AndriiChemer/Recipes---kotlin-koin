@@ -25,7 +25,8 @@ class RecipesApplication : Application() {
                     recipeShortDetailsModule,
                     recipeDetailsModule,
                     splashModule,
-                    favoriteRecipesModule
+                    favoriteRecipesModule,
+                    kitchenModule
                 )
             )
         }

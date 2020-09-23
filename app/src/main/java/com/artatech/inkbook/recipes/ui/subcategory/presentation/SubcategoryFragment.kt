@@ -15,6 +15,7 @@ import com.artatech.inkbook.recipes.R
 import com.artatech.inkbook.recipes.api.response.models.category.CategoryModel
 import com.artatech.inkbook.recipes.core.ui.adapter.SpacingItemDecoration
 import com.artatech.inkbook.recipes.ui.FragmentNavigationListener
+import com.artatech.inkbook.recipes.ui.recipeslist.presentation.RecipesActivity
 import com.artatech.inkbook.recipes.ui.subcategory.presentation.adapter.SubcategoriesAdapter
 import com.artatech.inkbook.recipes.ui.subcategory.presentation.adapter.EmptySubcategoryAdapter
 import kotlinx.android.synthetic.main.fragment_subcategory.*
@@ -95,14 +96,11 @@ class SubcategoryFragment : Fragment() {
         }
 
         viewModel.categoryData.observe(this) {
-//            fragmentNavigation?.onNavigate()
+            RecipesActivity.start(requireActivity(), it)
         }
     }
 
     private fun hideSubcategoryWithoutRecCat() {
-//        val params: ConstraintLayout.LayoutParams = recyclerGuidLine.layoutParams as ConstraintLayout.LayoutParams
-//        params.guidePercent = 0.0f
-//        recyclerGuidLine.layoutParams = params
         val layoutParam = appBarLayout.layoutParams
         layoutParam.height = 0
         appBarLayout.layoutParams = layoutParam

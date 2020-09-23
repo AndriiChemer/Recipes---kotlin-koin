@@ -65,7 +65,7 @@ class RecipeShortDetailActivity : AppCompatActivity() {
         }
 
         if (isFavorite) {
-            favoriteButton.setImageResource(R.drawable.ic_star_gold)
+            favoriteButton.setImageResource(R.drawable.ic_favorite_gold)
         }
     }
 
@@ -78,11 +78,11 @@ class RecipeShortDetailActivity : AppCompatActivity() {
             if (isFavoriteClick) {
                 isFavoriteClick = false
                 viewModel.removeFromFavorite(recipe)
-                favoriteButton.setImageResource(R.drawable.ic_star_border_gold)
+                favoriteButton.setImageResource(R.drawable.ic_favorite_border_gold)
             } else {
                 isFavoriteClick = true
                 viewModel.addToFavorite(recipe)
-                favoriteButton.setImageResource(R.drawable.ic_star_gold)
+                favoriteButton.setImageResource(R.drawable.ic_favorite_gold)
             }
         }
     }

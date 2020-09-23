@@ -1,29 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
-<!--    xmlns:tools="http://schemas.android.com/tools"-->
-<!--    android:layout_width="match_parent"-->
-<!--    android:layout_height="450dp"-->
-<!--    app:cardCornerRadius="35dp"-->
-<!--    android:background="@drawable/recipe_background"-->
-<!--    android:layout_marginStart="10dp"-->
-<!--    android:layout_marginEnd="10dp"-->
-<!--    android:layout_marginBottom="30dp"-->
-<!--    >-->
-
-<!--    -->
-<!--</androidx.cardview.widget.CardView>-->
-
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
     android:layout_width="match_parent"
-    android:layout_height="450dp"
-    android:layout_marginStart="10dp"
-    android:layout_marginEnd="10dp"
-    android:layout_marginBottom="30dp"
+    android:layout_height="250dp"
     >
 
     <ImageView
@@ -32,17 +14,6 @@
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
         tools:src="@drawable/simple_image"/>
-
-<!--    <com.github.mmin18.widget.RealtimeBlurView-->
-<!--        android:id="@+id/bluerView"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="80dp"-->
-<!--        android:background="@drawable/bottom_rounded_transparent"-->
-<!--        app:layout_constraintBottom_toBottomOf="@+id/imageView"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:realtimeBlurRadius="15dp"-->
-<!--        app:realtimeOverlayColor="#8000"/>-->
 
     <ImageView
         android:id="@+id/bluerView"
@@ -84,8 +55,15 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_margin="10dp"
-        android:src="@drawable/ic_star_border"
+        android:src="@drawable/ic_favorite_border_white"
         app:layout_constraintEnd_toEndOf="@+id/darkTransparentBackground"
         app:layout_constraintTop_toTopOf="@+id/darkTransparentBackground"/>
+
+    <ImageView
+        android:layout_width="75dp"
+        android:layout_height="70dp"
+        android:background="@drawable/gold_favorite_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

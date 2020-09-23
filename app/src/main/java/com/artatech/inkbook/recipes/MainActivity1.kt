@@ -20,13 +20,17 @@ class MainActivity1 : AppCompatActivity() {
             startActivity(intent)
         }
 
-        customNavigationScreen.setOnClickListener {
+        mainFlow.setOnClickListener {
             val intent = Intent(this, SplashActivity::class.java)
             startActivity(intent)
         }
 
         openRecipeListButton.setOnClickListener {
             RecipesActivity.start(this, CategoryIntentModel(43, 164, 173, "Солянка"))
+        }
+
+        customCategory.setOnClickListener {
+            CustomCategoryActivity.start(this)
         }
 
     }

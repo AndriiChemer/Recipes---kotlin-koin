@@ -1,6 +1,5 @@
 package com.artatech.inkbook.recipes.ui.recipeslist.presentation
 
-import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,6 +7,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.observe
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -15,6 +15,8 @@ import com.artatech.inkbook.recipes.R
 import com.artatech.inkbook.recipes.api.RECIPE_PER_PAGE
 import com.artatech.inkbook.recipes.api.response.PaginationRecipesResponse
 import com.artatech.inkbook.recipes.api.response.models.FullRecipeResponse
+import com.artatech.inkbook.recipes.core.ui.AbstractActivity
+import com.artatech.inkbook.recipes.core.ui.adapter.SpacingItemDecoration
 import com.artatech.inkbook.recipes.core.utils.RecipePreference
 import com.artatech.inkbook.recipes.ui.recipeshortdetail.presentation.RecipeShortDetailActivity
 import com.artatech.inkbook.recipes.ui.subcategory.presentation.CategoryIntentModel
@@ -23,7 +25,7 @@ import org.koin.android.ext.android.inject
 import org.koin.android.viewmodel.ext.android.viewModel
 import java.lang.NullPointerException
 
-class RecipesActivity : AppCompatActivity() {
+class RecipesActivity : AbstractActivity() {
 
     private val TAG = RecipesActivity::class.java.simpleName
 
@@ -96,6 +98,7 @@ class RecipesActivity : AppCompatActivity() {
         recyclerView.apply {
             adapter = recipesAdapter
             layoutManager = linearLayoutManager
+            addItemDecoration(SpacingItemDecoration(20))
             addOnScrollListener(paginationListener)
         }
     }
@@ -174,10 +177,11 @@ class RecipesActivity : AppCompatActivity() {
     companion object {
         private const val CATEGORY_REQUEST_KEY = "category_request_key"
 
-        fun start(context: Context, categoryIntentModel: CategoryIntentModel) {
+        fun start(context: FragmentActivity, categoryIntentModel: CategoryIntentModel) {
             val intent = Intent(context, RecipesActivity::class.java)
             intent.putExtra(CATEGORY_REQUEST_KEY, categoryIntentModel)
             context.startActivity(intent)
+            context.overridePendingTransition(R.anim.slide_in_right,  R.anim.no_animation)
         }
     }
 }

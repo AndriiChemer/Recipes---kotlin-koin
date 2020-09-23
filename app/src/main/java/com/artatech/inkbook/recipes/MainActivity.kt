@@ -8,11 +8,14 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.artatech.inkbook.recipes.api.response.models.CategoryKitchenTastyResponse
 import com.artatech.inkbook.recipes.api.response.models.category.CategoryModel
+import com.artatech.inkbook.recipes.api.response.models.recipe.KitchenResponse
+import com.artatech.inkbook.recipes.api.response.models.recipe.TastyResponse
 import com.artatech.inkbook.recipes.core.extentions.addFragment
 import com.artatech.inkbook.recipes.core.extentions.replaceFragment
 import com.artatech.inkbook.recipes.core.ui.custom.bottomnavview.CustomBottomNavigation
 import com.artatech.inkbook.recipes.ui.FragmentNavigationListener
 import com.artatech.inkbook.recipes.ui.category.presentation.CategoriesFragment
+import com.artatech.inkbook.recipes.ui.kitchen.presentation.KitchenFragment
 import com.artatech.inkbook.recipes.ui.recipesfavoritelist.presentation.RecipesFavoriteFragment
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
@@ -22,6 +25,7 @@ import java.lang.reflect.Type
 
 class MainActivity: AppCompatActivity(), FragmentNavigationListener {
 
+    private val kitchenFragment: KitchenFragment by inject()
     private val categoriesFragment: CategoriesFragment by inject()
     private val favoriteRecipeFragment: RecipesFavoriteFragment by inject()
 
@@ -31,13 +35,21 @@ class MainActivity: AppCompatActivity(), FragmentNavigationListener {
         setContentView(R.layout.activity_main)
 
         val model = getFromExtras()//intent.getFromExtras<CategoryKitchenTastyResponse>(MODEL_KEY)
-        val tastyList= model.tastes
-        val kitchenList= model.kitchens
-        val categoriesList= model.categories
+        val tastyList = model.tastes
+        val kitchenList = model.kitchens
+        val categoriesList = model.categories
 
 
+        setArgumentsForKitchenFragment(kitchenList, tastyList)
         prepareBottomNavigationListener()
         launchCategoriesFragment(categoriesList)
+    }
+
+    private fun setArgumentsForKitchenFragment(
+        kitchenList: List<KitchenResponse>,
+        tastyList: List<TastyResponse>
+    ) {
+        kitchenFragment.setArguments(kitchenList, tastyList)
     }
 
     private fun launchCategoriesFragment(categoriesList: List<CategoryModel>) {
@@ -55,7 +67,7 @@ class MainActivity: AppCompatActivity(), FragmentNavigationListener {
         bottomNavMenu.setOnNavigationItemListener(object : CustomBottomNavigation.ItemClickListener {
             override fun onItemClick(item: MenuItem) {
                 when(item.itemId) {
-                    R.id.action_kitchen -> replaceFragment(favoriteRecipeFragment)
+                    R.id.action_kitchen -> replaceFragment(kitchenFragment)
                     R.id.action_categories -> replaceFragment(categoriesFragment)
                     R.id.action_favorite -> replaceFragment(favoriteRecipeFragment)
                 }

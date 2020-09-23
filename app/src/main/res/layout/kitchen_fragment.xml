@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layoutBackground">
+
+    <TextView
+        android:id="@+id/kitchenTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/kitchen_title"
+        android:textColor="@color/textColorWhite"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <HorizontalScrollView
+        android:id="@+id/kitchenChipGroupScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kitchenTitle" >
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/kitchenChipGroup"
+            android:layout_width="200dp"
+            android:layout_height="200dp" />
+    </HorizontalScrollView>
+
+
+
+    <TextView
+        android:id="@+id/tastyTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/tasties"
+        android:textColor="@color/textColorWhite"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kitchenChipGroupScroll"/>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tastyTitle">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/tastyChipGroup"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tastyTitle" />
+    </HorizontalScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

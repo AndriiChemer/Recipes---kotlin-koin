@@ -8,10 +8,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.observe
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.artatech.inkbook.recipes.R
 import com.artatech.inkbook.recipes.api.response.models.FullRecipeResponse
+import com.artatech.inkbook.recipes.core.ui.adapter.SpacingItemDecoration
 import com.artatech.inkbook.recipes.ui.recipeslist.presentation.RecipesAdapter
 import kotlinx.android.synthetic.main.recipes_activity.*
 import org.koin.android.ext.android.inject
@@ -55,7 +57,8 @@ class RecipesFavoriteFragment : Fragment() {
     private fun initRecycler() {
         recyclerView.apply {
             adapter = recipesAdapter
-            layoutManager = LinearLayoutManager(requireActivity())
+            layoutManager = GridLayoutManager(requireActivity(), 2)
+            addItemDecoration(SpacingItemDecoration(40))
         }
     }
 
