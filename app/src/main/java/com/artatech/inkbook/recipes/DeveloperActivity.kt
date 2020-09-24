@@ -7,13 +7,13 @@ import com.artatech.inkbook.recipes.depricated.CategoriesActivity
 import com.artatech.inkbook.recipes.ui.recipeslist.presentation.RecipesActivity
 import com.artatech.inkbook.recipes.ui.splash.presentation.SplashActivity
 import com.artatech.inkbook.recipes.ui.subcategory.presentation.CategoryIntentModel
-import kotlinx.android.synthetic.main.activity_main1.*
+import kotlinx.android.synthetic.main.activity_developer.*
 
-class MainActivity1 : AppCompatActivity() {
+class DeveloperActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main1)
+        setContentView(R.layout.activity_developer)
 
         openCategoriesButton.setOnClickListener {
             val intent = Intent(this, CategoriesActivity::class.java)
@@ -30,7 +30,7 @@ class MainActivity1 : AppCompatActivity() {
         }
 
         customCategory.setOnClickListener {
-            CustomCategoryActivity.start(this)
+
         }
 
     }
