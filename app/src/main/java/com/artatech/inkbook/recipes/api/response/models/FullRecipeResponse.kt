@@ -10,7 +10,7 @@ class FullRecipeResponse(
     val energies: List<EnergyResponse>,
     val cookSteps: List<CookStepResponse>,
     val tags: List<TagResponse>,
-    val kitchens: List<KitchenResponse>
+    val kitchens: List<CountryResponse>
 ): ListRecyclerItem {
     override fun getViewType() = RECIPE_VIEW_TYPE
 }

@@ -33,5 +33,6 @@
     <color name="recipeCategoryBackground">@color/mulledWine</color>
     <color name="navBarBackgroundColor">@color/mirage</color>
     <color name="layoutBackground">@color/mulledWine</color>
+    <color name="chipColor">@color/mirage</color>
 
 </resources>

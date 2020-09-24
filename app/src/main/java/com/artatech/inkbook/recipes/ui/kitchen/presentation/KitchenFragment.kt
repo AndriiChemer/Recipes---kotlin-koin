@@ -5,17 +5,18 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.lifecycle.observe
 import com.artatech.inkbook.recipes.R
-import com.artatech.inkbook.recipes.api.response.models.recipe.KitchenResponse
+import com.artatech.inkbook.recipes.api.response.models.recipe.CountryResponse
 import com.artatech.inkbook.recipes.api.response.models.recipe.TastyResponse
 import com.google.android.material.chip.Chip
 import com.google.android.material.chip.ChipGroup
 import kotlinx.android.synthetic.main.kitchen_fragment.*
 import org.koin.android.viewmodel.ext.android.viewModel
 
-const val COUNT_OF_CHIP_GROUP = 5
+const val COUNT_OF_CHIP_GROUP = 4
 
 class KitchenFragment : Fragment() {
 
@@ -38,35 +39,45 @@ class KitchenFragment : Fragment() {
 
     private fun observeData() {
         viewModel.kitchens.observe(this) {
-            val chipGroupsItems = getGroupListItems(it, COUNT_OF_CHIP_GROUP)
-            chipGroupsItems.forEach { groupItems ->
-
-                val chipGrout = ChipGroup(requireContext())
-                chipGrout.layoutParams = ViewGroup.LayoutParams(
-                    ViewGroup.LayoutParams.MATCH_PARENT,
-                    ViewGroup.LayoutParams.WRAP_CONTENT)
-
-                for (item in groupItems) {
-                    addKitchenChip(chipGrout, item)
-                }
-                kitchenGroupContainer.addView(chipGrout)
+            createChipGroup(it, countryGroupContainer) { item ->
+                viewModel.onKitchenClick(item)
             }
         }
 
         viewModel.tastes.observe(this) {
-            val chipGroupsItems = getGroupListItems(it, COUNT_OF_CHIP_GROUP)
-            chipGroupsItems.forEach { groupItems ->
-
-                val chipGrout = ChipGroup(requireContext())
-                chipGrout.layoutParams = ViewGroup.LayoutParams(
-                    ViewGroup.LayoutParams.MATCH_PARENT,
-                    ViewGroup.LayoutParams.WRAP_CONTENT)
-
-                for (item in groupItems) {
-                    addTastyChip(chipGrout, item)
-                }
-                tastyGroupContainer.addView(chipGrout)
+            createChipGroup(it, tastyGroupContainer) {item ->
+                viewModel.onTastyClick(item)
             }
+        }
+    }
+
+    private fun <T: KitchenModel>createChipGroup(items: List<T>, container: LinearLayout, callback: (T) -> Unit) {
+        val chipGroupsItems = getListGroupItems(items, COUNT_OF_CHIP_GROUP)
+
+        chipGroupsItems.forEach { groupItems ->
+
+            val chipGrout = ChipGroup(requireContext())
+            chipGrout.layoutParams = ViewGroup.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT)
+
+            for (item in groupItems) {
+                addChip(chipGrout, item) {
+                    callback.invoke(item)
+                }
+            }
+            container.addView(chipGrout)
+        }
+    }
+
+    private fun <T: KitchenModel>addChip(chipGrout: ChipGroup, model: T, callback: (T) -> Unit) {
+        val inflater = LayoutInflater.from(requireContext())
+        val chip = inflater.inflate(R.layout.item_chip, chipGrout, false) as Chip
+        chip.text = model.getNameForTitle()
+
+        chipGrout.addView(chip)
+        chip.setOnClickListener {
+            callback.invoke(model)
         }
     }
 
@@ -76,32 +87,9 @@ class KitchenFragment : Fragment() {
         }
     }
 
-    private fun addKitchenChip(chipGrout: ChipGroup, kitchenModel: KitchenResponse) {
-        val inflater = LayoutInflater.from(requireContext())
-        val chip = inflater.inflate(R.layout.item_chip, chipGrout, false) as Chip
-        chip.text = kitchenModel.name
-
-        chipGrout.addView(chip)
-        chip.setOnClickListener {
-            viewModel.onKitchenClick(kitchenModel)
-        }
-
-    }
-
-    private fun addTastyChip(chipGrout: ChipGroup, tastyModel: TastyResponse) {
-        val inflater = LayoutInflater.from(requireContext())
-        val chip = inflater.inflate(R.layout.item_chip, chipGrout, false) as Chip
-        chip.text = tastyModel.name
-
-        chipGrout.addView(chip)
-        chip.setOnClickListener {
-            viewModel.onTastyClick(tastyModel)
-        }
-    }
-
-    fun setArguments(kitchenList: List<KitchenResponse>, tastyList: List<TastyResponse>) {
+    fun setArguments(countryList: List<CountryResponse>, tastyList: List<TastyResponse>) {
         val bundle = Bundle()
-        val model = KitchenBundleModel(kitchenList, tastyList)
+        val model = KitchenBundleModel(countryList, tastyList)
         bundle.putSerializable(KITCHEN_KEY, model)
         arguments = bundle
     }
@@ -113,7 +101,7 @@ class KitchenFragment : Fragment() {
     }
 }
 
-fun <T>getGroupListItems(items: List<T>, rowCount: Int): List<List<T>> {
+fun <T>getListGroupItems(items: List<T>, rowCount: Int): List<List<T>> {
     val groups = arrayListOf<List<T>>()
     val itemsInGroup = items.size / rowCount
 

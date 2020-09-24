@@ -156,10 +156,10 @@ class RecipeDetailActivity : AppCompatActivity() {
         container.addView(view)
     }
 
-    private fun showKitchen(kitchens: List<KitchenResponse>) {
-        val isKitchenVisible = kitchens.isNotEmpty()
+    private fun showKitchen(countries: List<CountryResponse>) {
+        val isKitchenVisible = countries.isNotEmpty()
         if (isKitchenVisible) {
-            kitchen.text = kitchens[0].name
+            kitchen.text = countries[0].name
         } else {
             kitchenIcon.visibility = View.GONE
             kitchen.visibility = View.GONE

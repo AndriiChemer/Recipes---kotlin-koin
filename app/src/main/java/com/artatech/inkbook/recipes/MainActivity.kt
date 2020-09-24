@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.artatech.inkbook.recipes.api.response.models.CategoryKitchenTastyResponse
 import com.artatech.inkbook.recipes.api.response.models.category.CategoryModel
-import com.artatech.inkbook.recipes.api.response.models.recipe.KitchenResponse
+import com.artatech.inkbook.recipes.api.response.models.recipe.CountryResponse
 import com.artatech.inkbook.recipes.api.response.models.recipe.TastyResponse
 import com.artatech.inkbook.recipes.core.extentions.addFragment
 import com.artatech.inkbook.recipes.core.extentions.replaceFragment
@@ -46,10 +46,10 @@ class MainActivity: AppCompatActivity(), FragmentNavigationListener {
     }
 
     private fun setArgumentsForKitchenFragment(
-        kitchenList: List<KitchenResponse>,
+        countryList: List<CountryResponse>,
         tastyList: List<TastyResponse>
     ) {
-        kitchenFragment.setArguments(kitchenList, tastyList)
+        kitchenFragment.setArguments(countryList, tastyList)
     }
 
     private fun launchCategoriesFragment(categoriesList: List<CategoryModel>) {
