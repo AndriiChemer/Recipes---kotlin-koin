@@ -9,8 +9,6 @@ import android.view.ViewGroup
 import com.google.android.material.chip.Chip
 import com.google.android.material.chip.ChipGroup
 import kotlinx.android.synthetic.main.activity_custom_category.*
-import kotlinx.android.synthetic.main.kitchen_fragment.kitchenChipGroup
-import kotlinx.android.synthetic.main.kitchen_fragment.tastyChipGroup
 
 class CustomCategoryActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,16 +46,11 @@ class CustomCategoryActivity : AppCompatActivity() {
             groupContainer.addView(chopGrout)
         }
 
-
-
-        list.forEach { item ->
-            addTastyChip(item)
-        }
     }
 
     private fun addKitchenChip(chopGrout: ChipGroup, kitchenModel: String) {
         val inflater = LayoutInflater.from(this)
-        val chip = inflater.inflate(R.layout.item_chip, kitchenChipGroup, false) as Chip
+        val chip = inflater.inflate(R.layout.item_chip, chopGrout, false) as Chip
         chip.text = kitchenModel
 
         chip.setOnClickListener {
@@ -65,16 +58,6 @@ class CustomCategoryActivity : AppCompatActivity() {
 
         chopGrout.addView(chip)
 
-    }
-
-    private fun addTastyChip(tastyModel: String) {
-        val inflater = LayoutInflater.from(this)
-        val chip = inflater.inflate(R.layout.item_chip, tastyChipGroup, false) as Chip
-        chip.text = tastyModel
-
-        chipGroup.addView(chip)
-        chip.setOnClickListener {
-        }
     }
 
     companion object {

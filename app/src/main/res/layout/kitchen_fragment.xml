@@ -29,10 +29,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/kitchenTitle" >
 
-        <com.google.android.material.chip.ChipGroup
-            android:id="@+id/kitchenChipGroup"
-            android:layout_width="200dp"
-            android:layout_height="200dp" />
+        <LinearLayout
+            android:id="@+id/kitchenGroupContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_width="200dp"
+            tools:layout_height="200dp"
+            android:orientation="vertical"/>
     </HorizontalScrollView>
 
 
@@ -59,14 +62,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tastyTitle">
 
-        <com.google.android.material.chip.ChipGroup
-            android:id="@+id/tastyChipGroup"
-            android:layout_width="0dp"
-            android:layout_height="200dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tastyTitle" />
+        <LinearLayout
+            android:id="@+id/tastyGroupContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_width="200dp"
+            tools:layout_height="200dp"
+            android:orientation="vertical"/>
     </HorizontalScrollView>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

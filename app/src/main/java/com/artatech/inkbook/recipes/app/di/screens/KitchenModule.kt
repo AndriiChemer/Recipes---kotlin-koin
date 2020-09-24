@@ -7,5 +7,5 @@ import org.koin.dsl.module
 
 val kitchenModule = module {
     viewModel { KitchenViewModel() }
-    factory { KitchenFragment() }
+    factory { KitchenFragment.newInstance() }
 }

@@ -11,8 +11,11 @@ import com.artatech.inkbook.recipes.R
 import com.artatech.inkbook.recipes.api.response.models.recipe.KitchenResponse
 import com.artatech.inkbook.recipes.api.response.models.recipe.TastyResponse
 import com.google.android.material.chip.Chip
+import com.google.android.material.chip.ChipGroup
 import kotlinx.android.synthetic.main.kitchen_fragment.*
 import org.koin.android.viewmodel.ext.android.viewModel
+
+const val COUNT_OF_CHIP_GROUP = 5
 
 class KitchenFragment : Fragment() {
 
@@ -35,14 +38,34 @@ class KitchenFragment : Fragment() {
 
     private fun observeData() {
         viewModel.kitchens.observe(this) {
-            it.forEach { kitchen ->
-                addKitchenChip(kitchen)
+            val chipGroupsItems = getGroupListItems(it, COUNT_OF_CHIP_GROUP)
+            chipGroupsItems.forEach { groupItems ->
+
+                val chipGrout = ChipGroup(requireContext())
+                chipGrout.layoutParams = ViewGroup.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT)
+
+                for (item in groupItems) {
+                    addKitchenChip(chipGrout, item)
+                }
+                kitchenGroupContainer.addView(chipGrout)
             }
         }
 
         viewModel.tastes.observe(this) {
-            it.forEach { tasty ->
-                addTastyChip(tasty)
+            val chipGroupsItems = getGroupListItems(it, COUNT_OF_CHIP_GROUP)
+            chipGroupsItems.forEach { groupItems ->
+
+                val chipGrout = ChipGroup(requireContext())
+                chipGrout.layoutParams = ViewGroup.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT)
+
+                for (item in groupItems) {
+                    addTastyChip(chipGrout, item)
+                }
+                tastyGroupContainer.addView(chipGrout)
             }
         }
     }
@@ -53,24 +76,24 @@ class KitchenFragment : Fragment() {
         }
     }
 
-    private fun addKitchenChip(kitchenModel: KitchenResponse) {
+    private fun addKitchenChip(chipGrout: ChipGroup, kitchenModel: KitchenResponse) {
         val inflater = LayoutInflater.from(requireContext())
-        val chip = inflater.inflate(R.layout.item_chip, kitchenChipGroup, false) as Chip
+        val chip = inflater.inflate(R.layout.item_chip, chipGrout, false) as Chip
         chip.text = kitchenModel.name
 
-        kitchenChipGroup.addView(chip)
+        chipGrout.addView(chip)
         chip.setOnClickListener {
             viewModel.onKitchenClick(kitchenModel)
         }
 
     }
 
-    private fun addTastyChip(tastyModel: TastyResponse) {
+    private fun addTastyChip(chipGrout: ChipGroup, tastyModel: TastyResponse) {
         val inflater = LayoutInflater.from(requireContext())
-        val chip = inflater.inflate(R.layout.item_chip, tastyChipGroup, false) as Chip
+        val chip = inflater.inflate(R.layout.item_chip, chipGrout, false) as Chip
         chip.text = tastyModel.name
 
-        tastyChipGroup.addView(chip)
+        chipGrout.addView(chip)
         chip.setOnClickListener {
             viewModel.onTastyClick(tastyModel)
         }
@@ -88,4 +111,23 @@ class KitchenFragment : Fragment() {
 
         fun newInstance() = KitchenFragment()
     }
+}
+
+fun <T>getGroupListItems(items: List<T>, rowCount: Int): List<List<T>> {
+    val groups = arrayListOf<List<T>>()
+    val itemsInGroup = items.size / rowCount
+
+    for (i in 0 until rowCount) {
+        val from = i * itemsInGroup
+        var to = (i + 1) * itemsInGroup
+
+        if (i == itemsInGroup - 1) {
+            to = items.lastIndex + 1
+        }
+
+        val group = items.subList(from, to)
+        groups.add(group)
+    }
+
+    return groups
 }
