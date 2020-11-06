@@ -25,7 +25,6 @@ class CategoriesViewModel(private val getCategoriesUseCase: GetCategoriesUseCase
     }
 
     fun onViewCreated(categoriesKey: String, arguments: Bundle?) {
-//        getBundleValue(categoriesKey, arguments)
         getFromExtras(categoriesKey, arguments)
     }
 

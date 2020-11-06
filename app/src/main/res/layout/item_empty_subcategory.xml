@@ -10,9 +10,9 @@
     <ImageView
         android:id="@+id/imageBackground"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="@drawable/subcategory_rounded_background" />
+        android:layout_height="140dp"
+        tools:scaleType="centerCrop"
+        tools:src="@drawable/simple_image" />
 
     <TextView
         android:id="@+id/title"
@@ -23,6 +23,7 @@
         android:gravity="center"
         android:paddingStart="5dp"
         android:paddingEnd="5dp"
-        tools:text="Категория" />
+        android:maxLength="33"
+        tools:text="Категорияfdfdfdfdfdfdfdfdfdfdfdfdfd" />
 
 </LinearLayout>

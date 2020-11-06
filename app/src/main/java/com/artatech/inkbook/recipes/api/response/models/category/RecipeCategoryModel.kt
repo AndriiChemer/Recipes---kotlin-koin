@@ -5,5 +5,6 @@ import java.io.Serializable
 class RecipeCategoryModel(
     val id: Int,
     val name: String,
-    val subcategoryId: Int
+    val subcategoryId: Int,
+    val imageName: String?
 ): Serializable

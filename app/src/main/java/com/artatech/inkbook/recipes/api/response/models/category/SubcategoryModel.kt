@@ -7,5 +7,6 @@ class SubcategoryModel(
     val id: Int,
     val name: String,
     val categoryId: Int,
+    val imageName: String?,
     val recipeCategories: List<RecipeCategoryModel>
 ): Serializable

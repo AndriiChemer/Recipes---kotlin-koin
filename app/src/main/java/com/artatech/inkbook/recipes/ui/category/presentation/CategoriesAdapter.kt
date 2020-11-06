@@ -57,7 +57,6 @@ class CategoriesAdapter : RecyclerView.Adapter<CategoriesAdapter.CategoryViewHol
 
         fun bind(category: CategoryModel, onCategoryClicked: (category: CategoryModel) -> Unit) {
 
-            Log.d("ANDRII", "categoryImage: ${category.imageName}")
             loadCategoryImage(category.imageName)
 
             itemView.categoryTitle.text = category.name

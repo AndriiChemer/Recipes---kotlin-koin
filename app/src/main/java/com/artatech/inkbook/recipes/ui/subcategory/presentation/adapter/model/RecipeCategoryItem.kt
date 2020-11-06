@@ -5,6 +5,7 @@ import com.artatech.inkbook.recipes.depricated.RECIPE_CATEGORY_VIEW_TYPE
 
 class RecipeCategoryItem(val id: Int,
                          val name: String,
-                         val subcategoryId: Int): ListRecyclerItem {
+                         val subcategoryId: Int,
+                         val imageUrl: String?): ListRecyclerItem {
     override fun getViewType() = RECIPE_CATEGORY_VIEW_TYPE
 }

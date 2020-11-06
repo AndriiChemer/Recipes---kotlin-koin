@@ -72,7 +72,7 @@ class SubcategoryActivity : AppCompatActivity() {
                 val subcategoryItem = SubcategoryItem(subcategory.id, subcategory.name, subcategory.categoryId, list, false)
                 items.add(subcategoryItem)
             } else {
-                val subcategoryItem = EmptySubcategoryItem(subcategory.id, subcategory.name, subcategory.categoryId)
+                val subcategoryItem = EmptySubcategoryItem(subcategory.id, subcategory.name, subcategory.categoryId, subcategory.imageName)
                 items.add(subcategoryItem)
             }
 
@@ -85,7 +85,7 @@ class SubcategoryActivity : AppCompatActivity() {
         val recipeCategoryRecyclerList = mutableListOf<RecipeCategoryItem>()
 
         recipeCategories.forEach { recipeCategory -> run {
-            val recipeCategoryItem = RecipeCategoryItem(recipeCategory.id, recipeCategory.name, recipeCategory.subcategoryId)
+            val recipeCategoryItem = RecipeCategoryItem(recipeCategory.id, recipeCategory.name, recipeCategory.subcategoryId, recipeCategory.imageName)
             recipeCategoryRecyclerList.add(recipeCategoryItem)
         } }
 
