@@ -11,7 +11,10 @@ import kotlinx.coroutines.withContext
 
 class GetRecipesByCategoryUseCase(private val repository: Repository) {
 
-    operator fun invoke(categoryRequest: CategoryRequest, coroutineScope: CoroutineScope, onResult: (Result<PaginationRecipesResponse>) -> Unit) {
+    operator fun invoke(categoryRequest: CategoryRequest,
+                        coroutineScope: CoroutineScope,
+                        onResult: (Result<PaginationRecipesResponse>) -> Unit) {
+
         coroutineScope.launch {
             val result = withContext(Dispatchers.IO) {
                 runCatching { repository.getRecipesByCategoryId(categoryRequest) }

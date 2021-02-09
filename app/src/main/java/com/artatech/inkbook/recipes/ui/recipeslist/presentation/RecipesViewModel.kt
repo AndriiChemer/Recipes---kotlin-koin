@@ -25,29 +25,38 @@ class RecipesViewModel(private val getRecipesUseCase: GetRecipesByCategoryUseCas
     fun getRecipes(category: CategoryIntentModel) {
         val categoryRequest = CategoryRequest(category.categoryId, category.subcategoryId, category.recipeCategoryId)
 
+        loadRecipe(categoryRequest)
+    }
+
+    private fun loadRecipe(categoryRequest: CategoryRequest, isLoadMore: Boolean = false) {
         getRecipesUseCase(categoryRequest, viewModelScope) { result ->
-            result.onSuccess { recipes.value = it }
+            result.onSuccess {
+                onRecipeLoadSuccess(isLoadMore, it)
+            }
             result.onFailure { error.value = it }
+        }
+    }
+
+    private fun onRecipeLoadSuccess(
+        isLoadMore: Boolean,
+        paginationRecipesResponse: PaginationRecipesResponse
+    ) {
+        if (isLoadMore) {
+            recipesLoadedMore.value = paginationRecipesResponse
+        } else {
+            recipes.value = paginationRecipesResponse
         }
     }
 
     @Deprecated("Remove it when migrate from activity to fragment")
     fun loadMoreRecipes(category: CategoryIntentModel, currentPage: Int) {
         val categoryRequest = CategoryRequest(category.categoryId, category.subcategoryId, category.recipeCategoryId, currentPage)
-
-        getRecipesUseCase(categoryRequest, viewModelScope) { result ->
-            result.onSuccess { recipesLoadedMore.value = it }
-            result.onFailure { error.value = it }
-        }
+        loadRecipe(categoryRequest, true)
     }
 
     fun loadMoreRecipes(currentPage: Int) {
         val categoryRequest = CategoryRequest(category.categoryId, category.subcategoryId, category.recipeCategoryId, currentPage)
-
-        getRecipesUseCase(categoryRequest, viewModelScope) { result ->
-            result.onSuccess { recipesLoadedMore.value = it }
-            result.onFailure { error.value = it }
-        }
+        loadRecipe(categoryRequest, true)
     }
 
     fun onViewCreated(key: String, arguments: Bundle?) {

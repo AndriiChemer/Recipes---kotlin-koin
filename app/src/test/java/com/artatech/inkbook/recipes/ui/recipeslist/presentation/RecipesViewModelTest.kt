@@ -3,10 +3,17 @@ package com.artatech.inkbook.recipes.ui.recipeslist.presentation
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.Observer
 import androidx.lifecycle.viewModelScope
+import com.artatech.inkbook.recipes.api.Repository
 import com.artatech.inkbook.recipes.api.request.CategoryRequest
 import com.artatech.inkbook.recipes.api.response.PaginationRecipesResponse
 import com.artatech.inkbook.recipes.ui.recipeslist.GetRecipesByCategoryUseCase
 import com.artatech.inkbook.recipes.ui.subcategory.presentation.CategoryIntentModel
+import junit.framework.Assert.assertEquals
+import junit.framework.Assert.assertNotNull
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.test.runBlockingTest
 import org.junit.Assert
 import org.junit.Before
 import org.junit.Rule
@@ -29,15 +36,7 @@ class RecipesViewModelTest {
     @Mock
     lateinit var useCaseMock: GetRecipesByCategoryUseCase
 
-    @Mock
-    private lateinit var mockObserver: Observer<PaginationRecipesResponse>
-
-//    @InjectMocks
-//    var viewModel = RecipesViewModel(useCaseMock)
     lateinit var viewModel: RecipesViewModel
-
-//    @InjectMocks
-//    var viewModel = RecipesViewModel(useCaseMock)
 
     @Mock
     lateinit var callbackMock: (Result<PaginationRecipesResponse>) -> Unit
@@ -48,21 +47,34 @@ class RecipesViewModelTest {
         viewModel = RecipesViewModel(useCaseMock)
     }
 
+    @ExperimentalCoroutinesApi
     @Test
     fun `retrieve recipe list successfully`() {
         val paginationListResponse = PaginationRecipesResponse(3,3,3, emptyList())
         val categoryRequest = CategoryRequest(3,3,3)
         val category = CategoryIntentModel(1,1,null, "title")
+        val result =  Result.success(paginationListResponse)
 
-        `when`(useCaseMock.invoke(categoryRequest, viewModel.viewModelScope, callbackMock)).then {
-            paginationListResponse
+
+        runBlocking {
+
+            `when`(callbackMock.invoke(result)).thenAnswer {
+                val arg = it.arguments[1]
+                val completion = arg as PaginationRecipesResponse
+                callbackMock(Result.success(completion))
+            }
+
+            `when`(useCaseMock.invoke(categoryRequest, this, callbackMock)).then {
+                callbackMock(result)
+            }
+
+            `when`(viewModel.getRecipes(category)).then {
+                useCaseMock.invoke(categoryRequest, this, callbackMock)
+            }
         }
-
         viewModel.getRecipes(category)
-//        liveData.observeForever(mockObserver)
 
-        val result = useCaseMock.invoke(categoryRequest, viewModel.viewModelScope, callbackMock)
 
-        Assert.assertNotEquals(result, viewModel.recipes.value)
+
     }
 }

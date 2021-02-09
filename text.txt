@@ -1,0 +1,11 @@
+Simple MVVM app
+https://proandroiddev.com/android-clean-architecture-with-viewmodel-usecases-and-repositories-part-2-unit-testing-4683b334b327
+
+Test ViewModel
+https://medium.com/tribalscale/testing-viewmodels-and-activities-in-your-mvvm-app-5bf946559258
+https://github.com/antonicg/cryptodata/tree/task/remove_rx_to_coroutines
+
+https://www.ericdecanini.com/2020/04/06/unit-testing-coroutines-on-android/
+
+https://blog.mindorks.com/unit-testing-viewmodel-with-kotlin-coroutines-and-livedata
+https://medium.com/@heyitsmohit/unit-testing-delays-errors-retries-with-kotlin-flows-77ce00d0c2f3
